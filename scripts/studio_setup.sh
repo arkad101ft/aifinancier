@@ -37,14 +37,19 @@ done
 echo "==> Whisper caption model (word timings)"
 HF_HUB_DISABLE_XET=1 .venv/bin/python -c "from faster_whisper import WhisperModel; WhisperModel('base', compute_type='int8')"
 
+echo "==> CLIP model (matches footage to each scene)"
+.venv/bin/python -c "from transformers import CLIPModel, CLIPProcessor as P; m='openai/clip-vit-base-patch32'; P.from_pretrained(m); CLIPModel.from_pretrained(m)"
+
 echo "==> Check"
 .venv/bin/python -c "import torch, transformers, cv2; print('python deps ok')"
 PATH="$PWD/.venv/bin:$PATH" .venv/bin/python - <<'PY'
 from tools.tool_registry import registry
 registry.discover()
-menu = registry.provider_menu()
-for cap in ("tts", "clip_acquisition", "clip_retrieval", "corpus_population", "subtitle", "video_post"):
-    ok = [t["name"] for t in menu.get(cap, {}).get("available", [])]
-    print(f"  {cap:18} {'OK  ' if ok else 'MISSING'} {', '.join(ok[:4])}")
+for name in ("piper_tts", "direct_clip_search", "clip_search", "corpus_builder",
+             "transcriber", "subtitle_gen", "video_compose"):
+    tool = registry.get(name)
+    status = tool.get_status().value if tool else "not found"
+    note = " (fine: key-based stock sources not configured)" if status == "degraded" else ""
+    print(f"  {name:20} {status}{note}")
 PY
 echo "Done. Open this repo in Claude Code and type:  /video <your idea>"
