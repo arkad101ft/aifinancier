@@ -26,7 +26,16 @@ pipeline/
 tests/qa/output/
 
 # Project workspaces (generated assets, renders — all regenerable)
-projects/
+# Studio: commit each project's SOURCE (scenes, scripts, timings, post kit),
+# never its media (voice, music, footage, renders, stills).
+projects/*/public/
+projects/*/renders/
+projects/*/assets/
+projects/*/snapshots/
+projects/**/*.mp4
+projects/**/*.wav
+projects/**/*.mp3
+projects/smoke/
 
 # Corpus directories (downloaded stock clips, thumbnails, embeddings —
 # regenerable from source APIs via corpus_builder). Explicit rule even
