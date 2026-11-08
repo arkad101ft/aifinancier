@@ -35,7 +35,12 @@ from .base import Candidate, SearchFilters
 
 _SEARCH_URL = "https://api.openverse.org/v1/images/"
 _TOKEN_URL = "https://api.openverse.org/v1/auth_tokens/token/"
-_USER_AGENT = "OpenMontage/0.1 (+https://github.com/calesthio/OpenMontage)"
+# Many downloads resolve to upload.wikimedia.org, which rate-limits the shared
+# OpenMontage string; see STOCK_USER_AGENT in .env.example.
+_USER_AGENT = os.environ.get(
+    "STOCK_USER_AGENT",
+    "AIFinancierStudio/1.0 (+https://github.com/arkad101ft/aifinancier)",
+)
 
 # Some hosts behind Openverse (Flickr's CDN in particular) reject any
 # User-Agent containing "Bot" and expect an image Accept header. Both are

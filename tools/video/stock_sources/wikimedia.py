@@ -8,6 +8,7 @@ and educational media under one searchable catalogue.
 from __future__ import annotations
 
 import html
+import os
 import re
 from pathlib import Path
 from typing import Any
@@ -16,7 +17,12 @@ from .base import Candidate, SearchFilters
 
 
 _API_URL = "https://commons.wikimedia.org/w/api.php"
-_USER_AGENT = "OpenMontageBot/0.1 (https://github.com/calesthio/OpenMontage)"
+# Wikimedia rate-limits (429) the User-Agent string shared by every OpenMontage
+# install. Set STOCK_USER_AGENT in .env to your own "Name/1.0 (contact URL)".
+_USER_AGENT = os.environ.get(
+    "STOCK_USER_AGENT",
+    "AIFinancierStudio/1.0 (https://github.com/arkad101ft/aifinancier)",
+)
 _COMMONS_LICENSE = "Wikimedia Commons (verify per-file license)"
 _HTML_TAG_RE = re.compile(r"<[^>]+>")
 

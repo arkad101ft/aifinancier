@@ -168,6 +168,8 @@ class NasaSource:
             return None
 
         try:
+            if asset_href.startswith("http://"):
+                asset_href = "https://" + asset_href[len("http://"):]
             r = requests.get(asset_href, timeout=30)
             r.raise_for_status()
             file_urls = r.json()
@@ -187,6 +189,10 @@ class NasaSource:
         # characters (especially older items whose nasa_id is a title).
         # URL-encode the path component so `requests.get` handles them.
         download_url = _encode_url_path(download_url)
+        # The NASA API lists plain-http asset URLs; the same files are served
+        # over https, and http is blocked behind many proxies.
+        if download_url.startswith("http://"):
+            download_url = "https://" + download_url[len("http://"):]
 
         # NASA doesn't give us dimensions or duration on the search
         # result. Width/height default to 0 and the corpus builder is
@@ -253,10 +259,12 @@ def _pick_video_url(file_urls: list[str]) -> str:
 
     NASA file URLs follow a ``<nasa_id>~<tag>.<ext>`` naming convention
     where tag is one of: ``orig``, ``large``, ``medium``, ``small``,
-    ``preview``, ``thumb``. Preference order (best quality first):
-    orig → large → medium → small. We skip previews and thumbnails.
+    ``preview``, ``thumb``. Preference order: large → medium → orig →
+    small. ``orig`` masters are often multi-GB broadcast files (5-8 GB for a
+    few minutes), far more than a 1080p short needs; ``large`` is ~1080p.
+    We skip previews and thumbnails.
     """
-    priority = ("orig", "large", "medium", "small")
+    priority = ("large", "medium", "orig", "small")
     buckets: dict[str, list[str]] = {p: [] for p in priority}
     for url in file_urls:
         lower = url.lower()

@@ -15,6 +15,20 @@ OpenMontage pipeline system in this repo.
 3. Then follow `AGENT_GUIDE.md` (mandatory, unchanged OpenMontage contract):
    pipelines, stage director skills, preflight, checkpoints, reviewer.
 
+## Footage sources: what actually works
+
+- Free, no key: `archive_org`, `wikimedia`, `nasa`, `loc` (Library of
+  Congress), `openverse`, `coverr`. Pexels/Pixabay/Unsplash need a free API
+  key in `.env`, and become the best general-purpose sources once one is set.
+- Cloud sessions (claude.ai/code, "aifinancier" environment): Archive.org
+  files download from rotating `*.archive.org` hosts, which only work if the
+  owner added `*.archive.org` to the environment's allowed hosts. Wikimedia
+  often answers 429 to shared cloud IPs. If a source fails, drop it for that
+  run, keep going with the others, and say so in the summary.
+- `nasa` is space/science only; `loc` is slow (30 s timeouts are normal).
+- Keep `HF_HUB_DISABLE_XET=1` (set in `.env`) so the Whisper/CLIP models
+  download behind proxies.
+
 ## How the owner talks to you
 
 - `/video <idea>` or just an idea sentence: produce one video.

@@ -2987,6 +2987,10 @@ class VideoCompose(BaseTool):
         # Layer 2: edit_decisions subtitle style
         if edit_decisions:
             ed_style = edit_decisions.get("subtitles", {}).get("style", {})
+            # The edit_decisions schema defines `style` as a display-mode
+            # string ("word-by-word"); only a dict carries style overrides.
+            if not isinstance(ed_style, dict):
+                ed_style = {}
             for k, v in ed_style.items():
                 if v is not None:
                     resolved[k] = v

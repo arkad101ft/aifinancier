@@ -3,6 +3,7 @@
 # Usage: bash scripts/studio_setup.sh     (from the repo root; safe to re-run)
 # Needs: python3 >= 3.10, node >= 22, ffmpeg. Installs everything else.
 set -euo pipefail
+export HF_HUB_DISABLE_XET=1   # plain HTTPS model downloads (works behind proxies)
 cd "$(dirname "$0")/.."
 
 echo "==> Python virtual environment (.venv)"
@@ -15,7 +16,8 @@ echo "==> OpenMontage Python dependencies + free offline voice (Piper)"
 $PIP install -q -r requirements.txt piper-tts
 
 echo "==> Footage matching (CLIP), video and transcription tools"
-$PIP install -q torch transformers opencv-python-headless yt-dlp faster-whisper Pygments
+$PIP install -q torch transformers opencv-python-headless yt-dlp faster-whisper Pygments "av<16"
+# av<16: faster-whisper 1.2 passes metadata_errors= to av.open(), removed in PyAV 16+.
 
 echo "==> Remotion composer (renders the final video)"
 (cd remotion-composer && npm install --no-audit --no-fund --loglevel=error)
@@ -31,6 +33,9 @@ for v in lessac/medium/en_US-lessac-medium ryan/high/en_US-ryan-high; do
 done
 
 [ -f .env ] || cp .env.example .env
+
+echo "==> Whisper caption model (word timings)"
+HF_HUB_DISABLE_XET=1 .venv/bin/python -c "from faster_whisper import WhisperModel; WhisperModel('base', compute_type='int8')"
 
 echo "==> Check"
 .venv/bin/python -c "import torch, transformers, cv2; print('python deps ok')"
