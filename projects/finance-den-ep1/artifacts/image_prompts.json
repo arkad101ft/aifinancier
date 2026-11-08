@@ -1,67 +1,291 @@
-{"note": "SDXL-Lightning prompts. Style prefix is added by gen_images.py. People are tiny or seen from behind (brief: no real faces). No text in images.",
-"images": [
- {"id": "s01_night_bay", "seed": 23, "prompt": "Singapore Marina Bay at night, glowing skyscrapers, three-tower hotel with rooftop deck, lights reflecting in the bay, dark blue sky with stars"},
- {"id": "s01_trading_room", "seed": 5, "prompt": "huge modern trading floor, rows of desks with glowing screens and charts, traders seen from behind, big windows over a city"},
- {"id": "s01_island_aerial", "seed": 9, "prompt": "aerial view of a small tropical island city, a highway crossing it from coast to coast, one tiny car, sea all around"},
- {"id": "s01_port", "seed": 14, "prompt": "busy container port, tall cranes, huge cargo ship stacked with colorful containers, tugboats, blue sea"},
- {"id": "s01_private_bank", "seed": 31, "prompt": "luxurious private bank lobby, marble floor, gold details, giant round vault door, wealthy clients seen from behind with suitcases"},
- {"id": "s01_banker_office", "seed": 8, "prompt": "1960s banker's office, wooden desk with an antique globe, big wall clock, window view of a harbour city, warm afternoon light"},
-
- {"id": "s02_old_river", "seed": 3, "prompt": "1960s Singapore river, old shophouses with red tile roofs, wooden bumboats, crowds seen from behind, palm trees"},
- {"id": "s02_empty_island", "seed": 12, "prompt": "small empty tropical island with swamp and mangroves, no farms, no mines, wooden huts on stilts, cloudy sky"},
- {"id": "s02_causeway_pipe", "seed": 19, "prompt": "long causeway bridge across a narrow strait with giant water pipes running along it, jungle on both shores"},
- {"id": "s02_harbour_1960s", "seed": 27, "prompt": "busy 1960s harbour, small cargo ships, warehouses, workers seen from behind carrying sacks, tropical town"},
- {"id": "s02_sunrise_harbour", "seed": 4, "prompt": "sunrise over a tropical harbour city, golden light rays, calm sea, small ships, hopeful mood"},
-
- {"id": "s03_two_men_globe", "seed": 41, "prompt": "1960s office interior, two men in suits seen from behind standing at a desk with a large globe, window with harbour view"},
- {"id": "s03_globe_closeup", "seed": 6, "prompt": "antique desk globe on a wooden desk, fountain pen and papers, warm lamp light, bookshelves"},
- {"id": "s03_three_clocks", "seed": 15, "prompt": "office wall with three round wall clocks in a row, wooden panelling, desk below with telephone"},
- {"id": "s03_earth_day_night", "seed": 2, "prompt": "planet earth seen from space, half in sunlight half at night with glowing city lights, stars"},
- {"id": "s03_government", "seed": 21, "prompt": "white colonial government building with columns, wide steps, palm trees, men in suits walking up the steps seen from behind"},
- {"id": "s03_bank_hall_1968", "seed": 10, "prompt": "grand 1960s banking hall, chandeliers, marble counters, bankers seen from behind, celebration with bunting"},
- {"id": "s03_dollar_vault", "seed": 33, "prompt": "bank vault filled with neat stacks of green banknotes on shelves, open round vault door, golden light"},
- {"id": "s03_welcome_ships", "seed": 17, "prompt": "harbour with ships arriving carrying crates of gold coins and banknotes, cheerful dock workers, sunny"},
- {"id": "s03_wall_falling", "seed": 25, "prompt": "old brick wall around a city crumbling down, coins and banknotes flowing through the gap, birds flying"},
-
- {"id": "s04_central_bank", "seed": 7, "prompt": "modern central bank headquarters tower with plaza and fountain, tropical trees, people walking seen from behind"},
- {"id": "s04_economists_1980s", "seed": 29, "prompt": "1980s office of economists, big paper charts pinned on walls, desks with papers and calculators, people seen from behind"},
- {"id": "s04_storm_island", "seed": 13, "prompt": "dark storm clouds over a small island city, rough sea, lightning, worried mood"},
- {"id": "s04_calm_lake", "seed": 36, "prompt": "perfectly calm lake reflecting a modern city skyline, soft morning light, ducks, peaceful and quiet"},
- {"id": "s04_twin_vaults", "seed": 18, "prompt": "grand marble hall with two giant round vault doors side by side, golden light, polished floor"},
- {"id": "s04_investors_arrive", "seed": 22, "prompt": "sunny business district street, international investors with briefcases arriving from taxis, seen from behind, skyscrapers"},
-
- {"id": "s05_trading_pit", "seed": 30, "prompt": "1990s futures trading pit, traders in colorful jackets shouting with hands raised, seen from behind, big price boards"},
- {"id": "s05_london_bank", "seed": 16, "prompt": "old grand British merchant bank building in London, stone facade with columns, rainy grey day, red bus passing"},
- {"id": "s05_drawer_night", "seed": 38, "prompt": "messy office desk at night, desk drawer stuffed with papers, desk lamp, computer screen glowing, empty office"},
- {"id": "s05_kobe_quake", "seed": 1, "prompt": "Japanese city street after an earthquake, cracked road, damaged buildings, emergency vehicles, smoke, no people"},
- {"id": "s05_red_market", "seed": 24, "prompt": "stock market board with falling red arrows and red numbers, worried traders seen from behind holding their heads"},
- {"id": "s05_empty_office", "seed": 35, "prompt": "empty bank office at night, cardboard boxes, chairs pushed in, papers on the floor, single light"},
- {"id": "s05_prison", "seed": 20, "prompt": "prison corridor with iron bars, long shadows, cold light, empty"},
- {"id": "s05_inspectors", "seed": 26, "prompt": "inspectors with magnifying glasses examining big ledgers at a long table, filing cabinets, seen from behind"},
-
- {"id": "s06_bank_queue", "seed": 32, "prompt": "long queue of worried people outside a bank in an Asian city, seen from behind, grey sky, 1997"},
- {"id": "s06_money_wind", "seed": 11, "prompt": "banknotes flying away in a strong wind over a city street, umbrellas, stormy sky"},
- {"id": "s06_gates_closed", "seed": 40, "prompt": "city gates being shut with heavy chains and padlocks, guards seen from behind, walls"},
- {"id": "s06_banks_open", "seed": 9, "prompt": "modern bank branches with wide open glass doors on a sunny street, welcoming, flags, people walking in seen from behind"},
- {"id": "s06_exchange_hall", "seed": 28, "prompt": "big modern stock exchange hall with giant screens, two trading floors joined into one, people seen from behind"},
- {"id": "s06_shield_city", "seed": 37, "prompt": "modern island city under a glowing transparent protective dome shield, open gates, ships coming in, sunny"},
-
- {"id": "s07_skyline_day", "seed": 23, "prompt": "Singapore skyline by day, Marina Bay, skyscrapers, ferris wheel, gardens, boats, bright blue sky"},
- {"id": "s07_fx_screens", "seed": 42, "prompt": "wall of glowing currency trading screens with charts going up, dark modern room, traders seen from behind"},
- {"id": "s07_wealth_office", "seed": 12, "prompt": "elegant wealth management office high in a skyscraper, glass walls, city view, bankers in a meeting seen from behind"},
- {"id": "s07_family_villa", "seed": 5, "prompt": "luxurious tropical villa with a private study, bookshelves, garden with palm trees, swimming pool"},
- {"id": "s07_four_cities", "seed": 19, "prompt": "four famous city skylines side by side on a hill, New York, London, Hong Kong, Singapore, sunny sky"},
-
- {"id": "s08_raid_night", "seed": 14, "prompt": "police raid at night outside a luxury bungalow, police cars with flashing lights, yellow police tape, officers seen from behind"},
- {"id": "s08_evidence", "seed": 31, "prompt": "evidence room with gold bars, stacks of cash, luxury watches and car keys on tables with evidence tags"},
- {"id": "s08_shady_alley", "seed": 21, "prompt": "dark alley at night, shadowy figures seen from behind carrying briefcases, neon lights, rain puddles"},
- {"id": "s08_cracked_vault", "seed": 8, "prompt": "giant round bank vault door with a crack running across it, dramatic dark lighting, dust"},
-
- {"id": "s09_kigali_hills", "seed": 3, "prompt": "Kigali city on green rolling hills at golden hour, modern domed convention centre, clean streets, trees, African city"},
- {"id": "s09_dubai", "seed": 27, "prompt": "Dubai skyline in the desert with very tall skyscrapers, palm trees, golden sunset"},
- {"id": "s09_foundations", "seed": 15, "prompt": "construction site on African hills, foundations being laid, cranes, workers in hard hats seen from behind, sunny"},
- {"id": "s09_african_market", "seed": 34, "prompt": "busy colorful African city market street with shops and banks, people seen from behind, motorbikes, sunny"},
-
- {"id": "s10_dusk_bay", "seed": 23, "prompt": "Singapore Marina Bay at dusk, warm orange and pink sky, skyscrapers lighting up, calm water, boats"},
- {"id": "s10_london", "seed": 6, "prompt": "London skyline with Tower Bridge and the river Thames, red double-decker buses, cloudy sky, boats"}
-]}
+{
+ "note": "SDXL-Lightning prompts. Style prefix is added by gen_images.py. People are tiny or seen from behind (brief: no real faces). No text in images.",
+ "images": [
+  {
+   "id": "s01_night_bay",
+   "seed": 23,
+   "prompt": "Singapore Marina Bay at night, glowing skyscrapers, three-tower hotel with rooftop deck, lights reflecting in the bay, dark blue sky with stars"
+  },
+  {
+   "id": "s01_trading_room",
+   "seed": 5,
+   "prompt": "huge modern trading floor, rows of desks with glowing screens and charts, traders seen from behind, big windows over a city"
+  },
+  {
+   "id": "s01_island_aerial",
+   "seed": 9,
+   "prompt": "aerial view of a small tropical island city, a highway crossing it from coast to coast, one tiny car, sea all around"
+  },
+  {
+   "id": "s01_port",
+   "seed": 14,
+   "prompt": "busy container port, tall cranes, huge cargo ship stacked with colorful containers, tugboats, blue sea"
+  },
+  {
+   "id": "s01_private_bank",
+   "seed": 31,
+   "prompt": "luxurious private bank lobby, marble floor, gold details, giant round vault door, wealthy clients seen from behind with suitcases"
+  },
+  {
+   "id": "s01_banker_office",
+   "seed": 8,
+   "prompt": "1960s banker's office, wooden desk with an antique globe, big wall clock, window view of a harbour city, warm afternoon light"
+  },
+  {
+   "id": "s02_old_river",
+   "seed": 3,
+   "prompt": "1960s Singapore river, old shophouses with red tile roofs, wooden bumboats, crowds seen from behind, palm trees"
+  },
+  {
+   "id": "s02_empty_island",
+   "seed": 12,
+   "prompt": "small empty tropical island with swamp and mangroves, no farms, no mines, wooden huts on stilts, cloudy sky"
+  },
+  {
+   "id": "s02_causeway_pipe",
+   "seed": 19,
+   "prompt": "long causeway bridge across a narrow strait with giant water pipes running along it, jungle on both shores"
+  },
+  {
+   "id": "s02_harbour_1960s",
+   "seed": 27,
+   "prompt": "busy 1960s harbour, small cargo ships, warehouses, workers seen from behind carrying sacks, tropical town"
+  },
+  {
+   "id": "s02_sunrise_harbour",
+   "seed": 4,
+   "prompt": "sunrise over a tropical harbour city, golden light rays, calm sea, small ships, hopeful mood"
+  },
+  {
+   "id": "s03_two_men_globe",
+   "seed": 41,
+   "prompt": "1960s office interior, two men in suits seen from behind standing at a desk with a large globe, window with harbour view"
+  },
+  {
+   "id": "s03_globe_closeup",
+   "seed": 6,
+   "prompt": "antique desk globe on a wooden desk, fountain pen and papers, warm lamp light, bookshelves"
+  },
+  {
+   "id": "s03_three_clocks",
+   "seed": 15,
+   "prompt": "office wall with three round wall clocks in a row, wooden panelling, desk below with telephone"
+  },
+  {
+   "id": "s03_earth_day_night",
+   "seed": 2,
+   "prompt": "planet earth floating in space, one half bright daylight with blue oceans, other half night with glowing yellow city lights, stars",
+   "plain": true
+  },
+  {
+   "id": "s03_government",
+   "seed": 21,
+   "prompt": "white colonial government building with columns, wide steps, palm trees, men in suits walking up the steps seen from behind"
+  },
+  {
+   "id": "s03_bank_hall_1968",
+   "seed": 10,
+   "prompt": "grand 1960s banking hall, chandeliers, marble counters, bankers seen from behind, celebration with bunting"
+  },
+  {
+   "id": "s03_dollar_vault",
+   "seed": 33,
+   "prompt": "inside a bank vault, metal shelves stacked with bundles of green dollar banknotes, giant open round steel vault door, golden light",
+   "plain": true
+  },
+  {
+   "id": "s03_welcome_ships",
+   "seed": 17,
+   "prompt": "harbour with ships arriving carrying crates of gold coins and banknotes, cheerful dock workers, sunny"
+  },
+  {
+   "id": "s03_wall_falling",
+   "seed": 25,
+   "prompt": "tall brick city wall collapsing, bricks falling, golden coins and banknotes pouring through the gap into a sunny harbour town",
+   "plain": true
+  },
+  {
+   "id": "s04_central_bank",
+   "seed": 7,
+   "prompt": "modern central bank headquarters tower with plaza and fountain, tropical trees, people walking seen from behind"
+  },
+  {
+   "id": "s04_economists_1980s",
+   "seed": 29,
+   "prompt": "1980s office of economists, big paper charts pinned on walls, desks with papers and calculators, people seen from behind"
+  },
+  {
+   "id": "s04_storm_island",
+   "seed": 13,
+   "prompt": "dark storm clouds over a small island city, rough sea, lightning, worried mood"
+  },
+  {
+   "id": "s04_calm_lake",
+   "seed": 36,
+   "prompt": "perfectly calm lake reflecting a modern city skyline, soft morning light, ducks, peaceful and quiet"
+  },
+  {
+   "id": "s04_twin_vaults",
+   "seed": 18,
+   "prompt": "two huge round steel bank vault doors side by side in a grand marble hall, polished floor, golden light",
+   "plain": true
+  },
+  {
+   "id": "s04_investors_arrive",
+   "seed": 22,
+   "prompt": "sunny business district street, international investors with briefcases arriving from taxis, seen from behind, skyscrapers"
+  },
+  {
+   "id": "s05_trading_pit",
+   "seed": 30,
+   "prompt": "1990s futures trading pit, traders in colorful jackets shouting with hands raised, seen from behind, big price boards"
+  },
+  {
+   "id": "s05_london_bank",
+   "seed": 16,
+   "prompt": "old grand British merchant bank building in London, stone facade with columns, rainy grey day, red bus passing"
+  },
+  {
+   "id": "s05_drawer_night",
+   "seed": 38,
+   "prompt": "messy office desk at night, desk drawer stuffed with papers, desk lamp, computer screen glowing, empty office"
+  },
+  {
+   "id": "s05_kobe_quake",
+   "seed": 1,
+   "prompt": "earthquake damage in a Japanese city, collapsed elevated highway, cracked broken road, tilted buildings, dust, fire trucks",
+   "plain": true
+  },
+  {
+   "id": "s05_red_market",
+   "seed": 24,
+   "prompt": "stock market board with falling red arrows and red numbers, worried traders seen from behind holding their heads"
+  },
+  {
+   "id": "s05_empty_office",
+   "seed": 35,
+   "prompt": "empty bank trading office at night, rows of desks with dark computer screens, cardboard boxes, papers scattered on the floor, single lamp",
+   "plain": true
+  },
+  {
+   "id": "s05_prison",
+   "seed": 20,
+   "prompt": "prison cell block corridor, rows of iron bars, concrete walls, cold blue light, long shadows, empty",
+   "plain": true
+  },
+  {
+   "id": "s05_inspectors",
+   "seed": 26,
+   "prompt": "inspectors with magnifying glasses examining big ledgers at a long table, filing cabinets, seen from behind"
+  },
+  {
+   "id": "s06_bank_queue",
+   "seed": 32,
+   "prompt": "long queue of worried people outside a bank in an Asian city, seen from behind, grey sky, 1997"
+  },
+  {
+   "id": "s06_money_wind",
+   "seed": 11,
+   "prompt": "storm wind blowing hundreds of banknotes away down a city street, people seen from behind chasing money, grey stormy sky",
+   "plain": true
+  },
+  {
+   "id": "s06_gates_closed",
+   "seed": 40,
+   "prompt": "city gates being shut with heavy chains and padlocks, guards seen from behind, walls"
+  },
+  {
+   "id": "s06_banks_open",
+   "seed": 9,
+   "prompt": "modern bank branches with wide open glass doors on a sunny street, welcoming, flags, people walking in seen from behind"
+  },
+  {
+   "id": "s06_exchange_hall",
+   "seed": 28,
+   "prompt": "big modern stock exchange hall with giant screens, two trading floors joined into one, people seen from behind"
+  },
+  {
+   "id": "s06_shield_city",
+   "seed": 37,
+   "prompt": "modern island city under a glowing transparent protective dome shield, open gates, ships coming in, sunny"
+  },
+  {
+   "id": "s07_skyline_day",
+   "seed": 23,
+   "prompt": "Singapore skyline by day, Marina Bay, skyscrapers, ferris wheel, gardens, boats, bright blue sky"
+  },
+  {
+   "id": "s07_fx_screens",
+   "seed": 42,
+   "prompt": "wall of glowing currency trading screens with charts going up, dark modern room, traders seen from behind"
+  },
+  {
+   "id": "s07_wealth_office",
+   "seed": 12,
+   "prompt": "elegant wealth management office high in a skyscraper, glass walls, city view, bankers in a meeting seen from behind"
+  },
+  {
+   "id": "s07_family_villa",
+   "seed": 5,
+   "prompt": "luxurious tropical villa with a private study, bookshelves, garden with palm trees, swimming pool"
+  },
+  {
+   "id": "s07_four_cities",
+   "seed": 19,
+   "prompt": "four famous city skylines side by side on a hill, New York, London, Hong Kong, Singapore, sunny sky"
+  },
+  {
+   "id": "s08_raid_night",
+   "seed": 14,
+   "prompt": "police raid at night outside a luxury modern house, police cars with flashing blue and red lights, yellow police tape, officers seen from behind",
+   "plain": true
+  },
+  {
+   "id": "s08_evidence",
+   "seed": 31,
+   "prompt": "police evidence room, long tables covered with gold bars, stacks of cash, luxury watches, car keys, evidence tags, fluorescent light",
+   "plain": true
+  },
+  {
+   "id": "s08_shady_alley",
+   "seed": 21,
+   "prompt": "dark alley at night, shadowy figures seen from behind carrying briefcases, neon lights, rain puddles"
+  },
+  {
+   "id": "s08_cracked_vault",
+   "seed": 8,
+   "prompt": "huge round steel bank vault door with a big crack across it, dark room, dramatic spotlight, dust in the air",
+   "plain": true
+  },
+  {
+   "id": "s09_kigali_hills",
+   "seed": 3,
+   "prompt": "Kigali city on green rolling hills at golden hour, modern domed convention centre, clean streets, trees, African city"
+  },
+  {
+   "id": "s09_dubai",
+   "seed": 27,
+   "prompt": "Dubai skyline in the desert with very tall skyscrapers, palm trees, golden sunset"
+  },
+  {
+   "id": "s09_foundations",
+   "seed": 15,
+   "prompt": "construction site on African hills, foundations being laid, cranes, workers in hard hats seen from behind, sunny"
+  },
+  {
+   "id": "s09_african_market",
+   "seed": 34,
+   "prompt": "busy colorful African city market street with shops and banks, people seen from behind, motorbikes, sunny"
+  },
+  {
+   "id": "s10_dusk_bay",
+   "seed": 23,
+   "prompt": "Singapore Marina Bay at dusk, warm orange and pink sky, skyscrapers lighting up, calm water, boats"
+  },
+  {
+   "id": "s10_london",
+   "seed": 6,
+   "prompt": "London skyline with Tower Bridge and the river Thames, red double-decker buses, cloudy sky, boats"
+  }
+ ]
+}

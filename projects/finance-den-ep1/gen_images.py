@@ -25,7 +25,8 @@ OUT = ROOT / "public" / "img"
 OUT.mkdir(parents=True, exist_ok=True)
 
 STYLE_PREFIX = "colorful detailed cartoon illustration, ink outlines, vivid full color, lush green trees, warm sunny light"
-NEGATIVE = ("monochrome, grayscale, black and white, sketch, photo, photorealistic, 3d render, blurry, lowres, "
+STYLE_PLAIN = "colorful detailed cartoon illustration, clean ink outlines, vivid full color, dramatic lighting"
+NEGATIVE = ("trees indoors, plants indoors, monochrome, grayscale, black and white, sketch, photo, photorealistic, 3d render, blurry, lowres, "
             "text, letters, watermark, logo, deformed, close-up face")
 W, H = 1344, 768   # SDXL-friendly 16:9; upscaled to 1920x1080 in the composition
 STEPS = 4
@@ -57,7 +58,7 @@ def main() -> None:
         if pipe is None:
             pipe = load_pipe()
         t0 = time.time()
-        img = pipe(prompt=f"{STYLE_PREFIX}, {item['prompt']}", negative_prompt=NEGATIVE, width=W, height=H,
+        img = pipe(prompt=f"{STYLE_PLAIN if item.get('plain') else STYLE_PREFIX}, {item['prompt']}", negative_prompt=NEGATIVE, width=W, height=H,
                    num_inference_steps=STEPS, guidance_scale=0,
                    generator=torch.Generator("cpu").manual_seed(item.get("seed", 7))).images[0]
         # upscale to 1080p with a light unsharp mask (keeps the ink lines crisp)

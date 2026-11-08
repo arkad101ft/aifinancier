@@ -10,15 +10,15 @@ Liam the Lion takes you from 1965, when Singapore was pushed out of Malaysia wit
 
 Chapters
 0:00 Trillion with a T
-0:45 Pushed out, 1965
-1:29 A gap in the world's clock
-2:55 A referee and a boring currency
-4:10 Barings, 1995
-5:24 Open, but careful
-6:25 The numbers today
-7:39 The S$3 billion case
-8:27 Lessons for Kigali
-9:28 The answer
+0:41 Pushed out, 1965
+1:19 A gap in the world's clock
+2:37 A referee and a boring currency
+3:44 Barings, 1995
+4:51 Open, but careful
+5:47 The numbers today
+6:55 The S$3 billion case
+7:39 Lessons for Kigali
+8:36 The answer
 
 Next in Money Cities: London.
 
@@ -28,14 +28,15 @@ This video is for education only, not financial advice.
 #Singapore #FinanceDen #MoneyCities #Economics #FinancialCentre #Forex #Barings #AsianFinancialCrisis #Kigali #PersonalFinance
 
 ## Credits
-- Animation: original flat-2D illustration made for Finance Den (no stock footage, no real faces or logos).
+- Illustrations: generated for Finance Den with SDXL-Lightning (ByteDance, OpenRAIL++ licence; commercial use allowed), animated with original overlays. No stock footage, no real faces or logos.
+- Host: Liam the Lion, Finance Den's character.
 - Maps: Natural Earth boundaries via world-atlas (public domain).
 - Music: "Documentary Calm" and "Tense" by leberch, Pixabay Music, Pixabay Content License (free, no attribution required).
 - Font: Inter (SIL Open Font License).
-- Narration in this cut: TEMPORARY Piper TTS voice (en_US-ryan-high), for timing only. Replace with the real voiceover before publishing.
+- Narration: Kokoro TTS voice "am_liam" (Apache-2.0 model). It's an AI voice: tick YouTube's "altered or synthetic content" disclosure if required.
 
 ## Before publishing
-- [ ] Swap in the real voiceover (see `projects/finance-den-ep1/README-studio.md`), re-time, re-render
+- [ ] Optional: swap in a recorded voiceover (see `projects/finance-den-ep1/README-studio.md`), re-render
 - [ ] Re-check chapter timestamps against the final render
 - [ ] Add end-screen elements in the bottom-right (kept clear for the last 20 s)
 - [ ] Facts and figures come from the Narration tab as written; fact-check before publishing
