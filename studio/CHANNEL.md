@@ -25,16 +25,19 @@ These are standing answers, so Claude won't ask them each time.
 
 ## Look and sound (Finance Den style guide)
 
-- default_pipeline: animated-explainer, atelier mode (hand-built Remotion scenes)
-- look: clean flat 2D illustration, light paper texture, simple shapes, bold outlines, no photorealism
+- default_pipeline: animated-explainer, atelier mode (illustrated backgrounds + hand-built overlays)
+- look: detailed hand-drawn storybook illustration (ink outlines, vivid full colour, lush, bird's-eye cities),
+  reference: `studio/characters/style-reference.jpg`. Backgrounds are generated locally for free with
+  SDXL-Lightning (`projects/finance-den-ep1/gen_images.py`, ~35 s/image on CPU); numbers, maps, charts and
+  captions are exact code overlays on top; Liam (SVG) is composited over the scene.
 - palette: paper #F7F4EE, navy #13233A, gold #F5A623, muted blue #5B8DEF; red #D93A3F ONLY for losses and crime
 - type: Inter Black / Bold; numbers large and exact, never rounded differently from the narration
 - motion: slow push-ins, numbers count up, maps draw themselves, new image every 3-6 s
 - transitions: cuts and quick wipes; gold swoosh between sections
 - branding: small "FINANCE DEN" tag bottom-left throughout
 - rules: no real faces (silhouettes + name captions), no real logos or mastheads (invented headline cards)
-- voice: the owner records the voiceover. Until it exists, use a temporary Piper voice
-  (en_US-ryan-high, length_scale 1.13) for timing only, and say so in post.md
+- voice: Kokoro "am_liam" (free, local, natural), speed 0.92 (~155 wpm, confident). The owner may later
+  supply a recorded voiceover per section (assets/audio/real/), which re-times everything automatically.
 - music: calm curious instrumental bed (Pixabay) + a tense cue for crashes/crime, ~17 dB under the voice
 
 ## Money and approvals

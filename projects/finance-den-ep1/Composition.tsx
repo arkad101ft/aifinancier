@@ -2,9 +2,8 @@ import React from "react";
 import { AbsoluteFill, Audio, CalculateMetadataFunction, interpolate, staticFile } from "remotion";
 import { C, FONT, Grain, TimelineCtx, Timeline, cueTime, mouthOpen, pop, prog, useT, useTimeline, Big } from "./lib";
 import { Liam, Expression, Pose } from "./Liam";
-import { S01, S02, S03, Sting } from "./ScenesA";
-import { S04, S05, S06 } from "./ScenesB";
-import { S07, S08, S09, S10 } from "./ScenesC";
+import { Sting } from "./ScenesA";
+import { V01, V02, V03, V04, V05, V06, V07, V08, V09, V10 } from "./ScenesV2";
 
 // ATELIER (BESPOKE) — hand-authored for Finance Den Ep. 1. See art-direction.md.
 
@@ -99,7 +98,7 @@ const Swooshes: React.FC = () => {
         if (t < a || t > b + 0.4) return null;
         const o = Math.min(prog(t, a, 0.4), 1 - prog(t, b, 0.4));
         return (
-          <div key={`ch-${s.id}`} style={{ position: "absolute", left: 70, top: 46, opacity: o, fontFamily: FONT, display: "flex",
+          <div key={`ch-${s.id}`} style={{ position: "absolute", left: 90, top: 14, opacity: o, fontFamily: FONT, display: "flex",
             alignItems: "center", gap: 14, background: "rgba(19,35,58,0.88)", padding: "10px 22px", borderRadius: 12 }}>
             <span style={{ color: C.gold, fontWeight: 900, fontSize: 26 }}>{String(i + 2).padStart(2, "0")}</span>
             <span style={{ color: C.paper, fontWeight: 800, fontSize: 26 }}>{s.title}</span>
@@ -142,11 +141,11 @@ const MusicTrack: React.FC<{ music?: string | null; tense?: string | null; vol: 
 export const Scene: React.FC<SceneProps> = ({ timeline, voice, music, tense, musicVolume = 0.22 }) => (
   <TimelineCtx.Provider value={timeline}>
     <AbsoluteFill style={{ background: C.paper, fontFamily: FONT }}>
-      <S01 /><S02 /><S03 /><S04 /><S05 /><S06 /><S07 /><S08 /><S09 /><S10 />
+      <V01 /><V02 /><V03 /><V04 /><V05 /><V06 /><V07 /><V08 /><V09 /><V10 />
       <Sting />
       <LiamLayer />
       <Swooshes />
-      <Grain />
+      <Grain opacity={0.05} />
       <Tag />
       <Audio src={staticFile(voice)} />
       <MusicTrack music={music} tense={tense} vol={musicVolume} />

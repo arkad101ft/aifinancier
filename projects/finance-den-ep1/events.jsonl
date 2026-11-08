@@ -376,3 +376,187 @@
 {"ts": "2026-11-08T20:31:20.165213+00:00", "call_id": "bf36321e69a94fbdb35e9b385ca6715d", "tool": "pixabay_music", "event": "finish", "output_path": "projects/finance-den-ep1/public/music_bed.mp3", "success": true, "cost_usd": 0.0, "duration_s": 3.02}
 {"ts": "2026-11-08T20:31:20.165590+00:00", "call_id": "3822aa07b1224147b24fd06bb9d0d9bd", "tool": "pixabay_music", "event": "start", "output_path": "projects/finance-den-ep1/public/music_tense.mp3"}
 {"ts": "2026-11-08T20:31:23.314065+00:00", "call_id": "3822aa07b1224147b24fd06bb9d0d9bd", "tool": "pixabay_music", "event": "finish", "output_path": "projects/finance-den-ep1/public/music_tense.mp3", "success": true, "cost_usd": 0.0, "duration_s": 3.15}
+{"ts": "2026-11-08T21:20:00.772875+00:00", "call_id": "ddfa10d76d084406b304db796bad48b2", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:20:04.209642+00:00", "call_id": "ddfa10d76d084406b304db796bad48b2", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.44}
+{"ts": "2026-11-08T21:20:08.031565+00:00", "call_id": "d8781edab63d418b94c5e0b9e171b3f4", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:20:12.038191+00:00", "call_id": "d8781edab63d418b94c5e0b9e171b3f4", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.01}
+{"ts": "2026-11-08T21:20:21.492502+00:00", "call_id": "3baef1b26bbc4c2cbc6091197b01aa3b", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:20:26.737791+00:00", "call_id": "3baef1b26bbc4c2cbc6091197b01aa3b", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 5.25}
+{"ts": "2026-11-08T21:20:31.157791+00:00", "call_id": "75c8447538534910bc68bcba906f7880", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:20:34.855350+00:00", "call_id": "75c8447538534910bc68bcba906f7880", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.7}
+{"ts": "2026-11-08T21:20:39.370175+00:00", "call_id": "b21864785e494fa6809408827e4c01c1", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:20:42.016071+00:00", "call_id": "b21864785e494fa6809408827e4c01c1", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 2.65}
+{"ts": "2026-11-08T21:20:48.165774+00:00", "call_id": "a33fdf869e744b439bec2f6c0ee899f7", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:20:51.619202+00:00", "call_id": "a33fdf869e744b439bec2f6c0ee899f7", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.45}
+{"ts": "2026-11-08T21:20:54.061137+00:00", "call_id": "334632110acc464a83ab75c57843daf7", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:20:56.957767+00:00", "call_id": "334632110acc464a83ab75c57843daf7", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 2.9}
+{"ts": "2026-11-08T21:21:02.863617+00:00", "call_id": "ba594d6e950a43289819ee7ad3fca432", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:21:06.717609+00:00", "call_id": "ba594d6e950a43289819ee7ad3fca432", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.85}
+{"ts": "2026-11-08T21:21:14.187360+00:00", "call_id": "92e58261e3924a35bc303664100b0a51", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:21:18.631627+00:00", "call_id": "92e58261e3924a35bc303664100b0a51", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.44}
+{"ts": "2026-11-08T21:21:26.277054+00:00", "call_id": "6fe2be87103a4b19b09b7cdaa1ab419f", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:21:31.343320+00:00", "call_id": "6fe2be87103a4b19b09b7cdaa1ab419f", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 5.07}
+{"ts": "2026-11-08T21:21:36.683194+00:00", "call_id": "e68ca94afacb45ad8f4a4b1083424c06", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:21:40.115995+00:00", "call_id": "e68ca94afacb45ad8f4a4b1083424c06", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.43}
+{"ts": "2026-11-08T21:21:49.373969+00:00", "call_id": "bb5bf119a5f64c6db593cf9246a7d8ca", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:21:54.406098+00:00", "call_id": "bb5bf119a5f64c6db593cf9246a7d8ca", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 5.03}
+{"ts": "2026-11-08T21:21:57.556847+00:00", "call_id": "e21498190c65491589c8af56ae3a4c72", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:22:01.078962+00:00", "call_id": "e21498190c65491589c8af56ae3a4c72", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.52}
+{"ts": "2026-11-08T21:22:10.643288+00:00", "call_id": "fbac8cc4587a4500ad91d678e4c15261", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:22:15.364996+00:00", "call_id": "fbac8cc4587a4500ad91d678e4c15261", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.72}
+{"ts": "2026-11-08T21:22:22.999376+00:00", "call_id": "39d92a70223b4ffdb4ef9b89a1ca7c33", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:22:27.458493+00:00", "call_id": "39d92a70223b4ffdb4ef9b89a1ca7c33", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.46}
+{"ts": "2026-11-08T21:22:38.656774+00:00", "call_id": "33e04ad2d96e4cac8600fb70aeffa1be", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:22:43.644873+00:00", "call_id": "33e04ad2d96e4cac8600fb70aeffa1be", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.99}
+{"ts": "2026-11-08T21:22:51.453328+00:00", "call_id": "3f00945eab364f19996d73d09a8affae", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:22:55.272059+00:00", "call_id": "3f00945eab364f19996d73d09a8affae", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.82}
+{"ts": "2026-11-08T21:23:03.513515+00:00", "call_id": "b5125bb66294402f964cf3d814f2d02f", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:23:07.090096+00:00", "call_id": "b5125bb66294402f964cf3d814f2d02f", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.58}
+{"ts": "2026-11-08T21:23:09.671097+00:00", "call_id": "1fdb42843f2f4fb1ba829c484d9636b9", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:23:13.018236+00:00", "call_id": "1fdb42843f2f4fb1ba829c484d9636b9", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.35}
+{"ts": "2026-11-08T21:23:20.068388+00:00", "call_id": "5d411b370eb542628f62ec8f13a075c5", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:23:24.512871+00:00", "call_id": "5d411b370eb542628f62ec8f13a075c5", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.44}
+{"ts": "2026-11-08T21:23:30.601798+00:00", "call_id": "6ed874ae24044500aa2f49a1324a3838", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:23:34.425180+00:00", "call_id": "6ed874ae24044500aa2f49a1324a3838", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.82}
+{"ts": "2026-11-08T21:23:39.519900+00:00", "call_id": "1823d9846dad49249b0fcfb14edf920d", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:23:42.908145+00:00", "call_id": "1823d9846dad49249b0fcfb14edf920d", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.39}
+{"ts": "2026-11-08T21:23:53.151707+00:00", "call_id": "1329b5197b574c4f939cddf304fb35cc", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:23:57.110578+00:00", "call_id": "1329b5197b574c4f939cddf304fb35cc", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.96}
+{"ts": "2026-11-08T21:23:59.318806+00:00", "call_id": "3941e7f269574ea1b5ff85a69b92931b", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:24:02.367800+00:00", "call_id": "3941e7f269574ea1b5ff85a69b92931b", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.05}
+{"ts": "2026-11-08T21:24:07.365992+00:00", "call_id": "a1880728a378455c9d2b640887298669", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:24:11.076661+00:00", "call_id": "a1880728a378455c9d2b640887298669", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.71}
+{"ts": "2026-11-08T21:24:18.239973+00:00", "call_id": "919587da0f0b450f8651377dfef6ec75", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:24:22.292493+00:00", "call_id": "919587da0f0b450f8651377dfef6ec75", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.05}
+{"ts": "2026-11-08T21:24:32.476876+00:00", "call_id": "8cd1e1d7edc14becaaaef494fb13422a", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:24:37.065763+00:00", "call_id": "8cd1e1d7edc14becaaaef494fb13422a", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.59}
+{"ts": "2026-11-08T21:24:40.202689+00:00", "call_id": "b2b2f4cf3af74801aec7c47a867d4b99", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:24:43.121643+00:00", "call_id": "b2b2f4cf3af74801aec7c47a867d4b99", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 2.92}
+{"ts": "2026-11-08T21:24:52.386567+00:00", "call_id": "f5fcac68ae9b4708bbbce835bb89c133", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:24:57.516807+00:00", "call_id": "f5fcac68ae9b4708bbbce835bb89c133", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 5.13}
+{"ts": "2026-11-08T21:24:59.618719+00:00", "call_id": "61110aceb1904fda9d70c2e02c66d9a6", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:25:02.756731+00:00", "call_id": "61110aceb1904fda9d70c2e02c66d9a6", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.14}
+{"ts": "2026-11-08T21:25:11.783247+00:00", "call_id": "22f0220504c948c999b8b4517d272484", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:25:15.382184+00:00", "call_id": "22f0220504c948c999b8b4517d272484", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.6}
+{"ts": "2026-11-08T21:25:23.604313+00:00", "call_id": "4708f6cf67674cdfa7ce89f754c86608", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:25:28.087930+00:00", "call_id": "4708f6cf67674cdfa7ce89f754c86608", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.48}
+{"ts": "2026-11-08T21:25:31.441872+00:00", "call_id": "d6c5c379a2c1457e84d11b5e36ca0233", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:25:35.071525+00:00", "call_id": "d6c5c379a2c1457e84d11b5e36ca0233", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.63}
+{"ts": "2026-11-08T21:25:42.351510+00:00", "call_id": "4625c2aba4ec4f428827d6ae4cc9fdea", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:25:45.750549+00:00", "call_id": "4625c2aba4ec4f428827d6ae4cc9fdea", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.4}
+{"ts": "2026-11-08T21:25:51.483640+00:00", "call_id": "c85bbe325a9843d2ad92c8e4448e3616", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:25:55.461844+00:00", "call_id": "c85bbe325a9843d2ad92c8e4448e3616", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.98}
+{"ts": "2026-11-08T21:25:58.280314+00:00", "call_id": "eb27081c8c324f37bbde3b22d35fa6ee", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:26:01.798422+00:00", "call_id": "eb27081c8c324f37bbde3b22d35fa6ee", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.52}
+{"ts": "2026-11-08T21:26:11.591596+00:00", "call_id": "fe2f4d4b8c924002adf7d34a05f145e6", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:26:16.662626+00:00", "call_id": "fe2f4d4b8c924002adf7d34a05f145e6", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 5.07}
+{"ts": "2026-11-08T21:26:23.640359+00:00", "call_id": "fdb09dfca2e54c3a8d1d7d5d22537f9b", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:26:28.354961+00:00", "call_id": "fdb09dfca2e54c3a8d1d7d5d22537f9b", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.71}
+{"ts": "2026-11-08T21:26:32.039192+00:00", "call_id": "9b3eb3e617034be4885a51d612504063", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:26:35.504470+00:00", "call_id": "9b3eb3e617034be4885a51d612504063", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.47}
+{"ts": "2026-11-08T21:26:43.010162+00:00", "call_id": "cefe018bc83043c9af590122a4a3d004", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:26:47.937878+00:00", "call_id": "cefe018bc83043c9af590122a4a3d004", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.93}
+{"ts": "2026-11-08T21:26:57.903606+00:00", "call_id": "ea967013bfea4fcf8cad12b8cc00df52", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:27:03.469078+00:00", "call_id": "ea967013bfea4fcf8cad12b8cc00df52", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 5.57}
+{"ts": "2026-11-08T21:27:10.844683+00:00", "call_id": "8dcef3deec644f5a8518665336727780", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:27:15.200570+00:00", "call_id": "8dcef3deec644f5a8518665336727780", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.36}
+{"ts": "2026-11-08T21:27:19.957287+00:00", "call_id": "f6395ad1cc144ba09a09872f90797ad1", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:27:23.684435+00:00", "call_id": "f6395ad1cc144ba09a09872f90797ad1", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.73}
+{"ts": "2026-11-08T21:27:29.724452+00:00", "call_id": "5195e2316abe474aa8f24ade9ca61879", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:27:33.704488+00:00", "call_id": "5195e2316abe474aa8f24ade9ca61879", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.98}
+{"ts": "2026-11-08T21:27:39.596214+00:00", "call_id": "4ed24b067a1b481989e5ccc58cb44923", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:27:43.101829+00:00", "call_id": "4ed24b067a1b481989e5ccc58cb44923", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.51}
+{"ts": "2026-11-08T21:27:45.225744+00:00", "call_id": "39e5814147ac4e0494d13415206a4458", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:27:47.191927+00:00", "call_id": "39e5814147ac4e0494d13415206a4458", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 1.97}
+{"ts": "2026-11-08T21:28:05.734048+00:00", "call_id": "fbd6f550af34421d9b8fcbe07350654f", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:28:09.446026+00:00", "call_id": "fbd6f550af34421d9b8fcbe07350654f", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.71}
+{"ts": "2026-11-08T21:28:13.181568+00:00", "call_id": "d95abc5d7c304f61bea7d340d1abc299", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:28:16.353989+00:00", "call_id": "d95abc5d7c304f61bea7d340d1abc299", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.17}
+{"ts": "2026-11-08T21:28:26.230684+00:00", "call_id": "425e691d19cf48f68ed5913b9ad8538c", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:28:30.439071+00:00", "call_id": "425e691d19cf48f68ed5913b9ad8538c", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.21}
+{"ts": "2026-11-08T21:28:35.276225+00:00", "call_id": "4c94d92299c744bfb7aae20e17be4e19", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:28:38.795974+00:00", "call_id": "4c94d92299c744bfb7aae20e17be4e19", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.52}
+{"ts": "2026-11-08T21:28:44.925122+00:00", "call_id": "617ad8d9885e4da7aa23c774d873a9c3", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:28:48.353129+00:00", "call_id": "617ad8d9885e4da7aa23c774d873a9c3", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.43}
+{"ts": "2026-11-08T21:28:56.349806+00:00", "call_id": "befc3ef73fdf44c1bad20c9857fd5340", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:29:01.340156+00:00", "call_id": "befc3ef73fdf44c1bad20c9857fd5340", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.99}
+{"ts": "2026-11-08T21:29:03.563821+00:00", "call_id": "3c6b86f1aef6409cbbe91fd0b34a3525", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:29:06.713674+00:00", "call_id": "3c6b86f1aef6409cbbe91fd0b34a3525", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.15}
+{"ts": "2026-11-08T21:29:13.500715+00:00", "call_id": "4a55eda55bcc4aacb7eac46701a46ca1", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:29:17.124577+00:00", "call_id": "4a55eda55bcc4aacb7eac46701a46ca1", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.62}
+{"ts": "2026-11-08T21:29:24.457122+00:00", "call_id": "1e943efb0c604fb494e72f2561df8cd1", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:29:27.529170+00:00", "call_id": "1e943efb0c604fb494e72f2561df8cd1", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.07}
+{"ts": "2026-11-08T21:29:36.338440+00:00", "call_id": "8a26234399594ce48fc2c63697f2bd4d", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:29:40.560998+00:00", "call_id": "8a26234399594ce48fc2c63697f2bd4d", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.22}
+{"ts": "2026-11-08T21:29:47.150958+00:00", "call_id": "5b138d73d7074cd1ba8120f727a45d69", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:29:50.386369+00:00", "call_id": "5b138d73d7074cd1ba8120f727a45d69", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.24}
+{"ts": "2026-11-08T21:30:00.190457+00:00", "call_id": "a2ab31e9581c4947b31008c15dba8930", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:30:04.842110+00:00", "call_id": "a2ab31e9581c4947b31008c15dba8930", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.65}
+{"ts": "2026-11-08T21:30:07.728334+00:00", "call_id": "399ca632cf684b6b9ff7a1c2e16c8794", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:30:11.217757+00:00", "call_id": "399ca632cf684b6b9ff7a1c2e16c8794", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.49}
+{"ts": "2026-11-08T21:30:20.472865+00:00", "call_id": "c218e19e2f904d3a8e798dc0bc48577c", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:30:25.549040+00:00", "call_id": "c218e19e2f904d3a8e798dc0bc48577c", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 5.08}
+{"ts": "2026-11-08T21:30:34.054682+00:00", "call_id": "65952ded2d364438a259d5b9370092d4", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:30:38.655708+00:00", "call_id": "65952ded2d364438a259d5b9370092d4", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.6}
+{"ts": "2026-11-08T21:30:50.365567+00:00", "call_id": "3c0cb93b4c3c4d119bd0e1b8a9ce9f59", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:30:57.268941+00:00", "call_id": "3c0cb93b4c3c4d119bd0e1b8a9ce9f59", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 6.9}
+{"ts": "2026-11-08T21:31:05.630480+00:00", "call_id": "e9b5a5cc797f45a394220824b6eec447", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:31:09.410309+00:00", "call_id": "e9b5a5cc797f45a394220824b6eec447", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.78}
+{"ts": "2026-11-08T21:31:18.812823+00:00", "call_id": "975fd90aaaed42ef9c3c912d5388ab08", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:31:23.251052+00:00", "call_id": "975fd90aaaed42ef9c3c912d5388ab08", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.44}
+{"ts": "2026-11-08T21:31:25.902780+00:00", "call_id": "cfc23d4b30af4baa829f23ea88e00431", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:31:28.605603+00:00", "call_id": "cfc23d4b30af4baa829f23ea88e00431", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 2.7}
+{"ts": "2026-11-08T21:31:35.783843+00:00", "call_id": "30f785ac7e5b44a2a0762a42467da3ad", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:31:39.959624+00:00", "call_id": "30f785ac7e5b44a2a0762a42467da3ad", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.18}
+{"ts": "2026-11-08T21:31:46.552219+00:00", "call_id": "583df65615f648c4aca1ee1be33c9062", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:31:50.996388+00:00", "call_id": "583df65615f648c4aca1ee1be33c9062", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.44}
+{"ts": "2026-11-08T21:31:56.951572+00:00", "call_id": "3b7902d60d5b4c0999023973b6214468", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:32:00.257743+00:00", "call_id": "3b7902d60d5b4c0999023973b6214468", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.31}
+{"ts": "2026-11-08T21:32:11.982043+00:00", "call_id": "1dca15b12a1d4575973b580a16380639", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:32:17.650986+00:00", "call_id": "1dca15b12a1d4575973b580a16380639", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 5.67}
+{"ts": "2026-11-08T21:32:20.074337+00:00", "call_id": "9828a55827764aeeae28a3bf49d5390f", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:32:23.325642+00:00", "call_id": "9828a55827764aeeae28a3bf49d5390f", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.25}
+{"ts": "2026-11-08T21:32:29.392898+00:00", "call_id": "d4a552fe27d444c1a7c679f3a699ea66", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:32:32.124361+00:00", "call_id": "d4a552fe27d444c1a7c679f3a699ea66", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 2.73}
+{"ts": "2026-11-08T21:32:39.644681+00:00", "call_id": "35066dd27bc44a028dc0232af3ff0e2d", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:32:43.529398+00:00", "call_id": "35066dd27bc44a028dc0232af3ff0e2d", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.88}
+{"ts": "2026-11-08T21:32:54.890005+00:00", "call_id": "7a6143cdadfd41e986381ff89820557f", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:32:58.755471+00:00", "call_id": "7a6143cdadfd41e986381ff89820557f", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.87}
+{"ts": "2026-11-08T21:33:01.597455+00:00", "call_id": "702b0ce6dd964e8d9e009b52942dcf76", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:33:04.801156+00:00", "call_id": "702b0ce6dd964e8d9e009b52942dcf76", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.2}
+{"ts": "2026-11-08T21:33:14.628656+00:00", "call_id": "0c5f841ba9f64258b8d1c930423f61c1", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:33:20.349831+00:00", "call_id": "0c5f841ba9f64258b8d1c930423f61c1", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 5.72}
+{"ts": "2026-11-08T21:33:22.361612+00:00", "call_id": "6f76ba0702ec4221872ce8fc29b56b4b", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:33:25.721260+00:00", "call_id": "6f76ba0702ec4221872ce8fc29b56b4b", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.36}
+{"ts": "2026-11-08T21:33:35.256183+00:00", "call_id": "20f44fed7eba496d9c59c8963976d78f", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:33:39.518410+00:00", "call_id": "20f44fed7eba496d9c59c8963976d78f", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.26}
+{"ts": "2026-11-08T21:33:48.263612+00:00", "call_id": "e26444cb0a6149439d75a380edc5ea68", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:33:52.318628+00:00", "call_id": "e26444cb0a6149439d75a380edc5ea68", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.05}
+{"ts": "2026-11-08T21:33:55.868547+00:00", "call_id": "774008609ece45d39ccbdfb385bfae5a", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:33:59.189589+00:00", "call_id": "774008609ece45d39ccbdfb385bfae5a", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.32}
+{"ts": "2026-11-08T21:34:07.377928+00:00", "call_id": "34ab612cf05f4dddbb9b8a6ac3a34875", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:34:11.550833+00:00", "call_id": "34ab612cf05f4dddbb9b8a6ac3a34875", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.17}
+{"ts": "2026-11-08T21:34:18.927447+00:00", "call_id": "1c766b6f2bd249ad922bccc97380574a", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:34:22.591921+00:00", "call_id": "1c766b6f2bd249ad922bccc97380574a", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.66}
+{"ts": "2026-11-08T21:34:25.669967+00:00", "call_id": "825e51f9a47549d99d3d54bbed7e5122", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:34:29.245641+00:00", "call_id": "825e51f9a47549d99d3d54bbed7e5122", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.58}
+{"ts": "2026-11-08T21:34:40.121074+00:00", "call_id": "c0e3f675248d4dc18fd8d6603526d47a", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:34:44.232831+00:00", "call_id": "c0e3f675248d4dc18fd8d6603526d47a", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.11}
+{"ts": "2026-11-08T21:34:52.251689+00:00", "call_id": "76f6a859227f48369bb270438c9c21c6", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:34:55.789380+00:00", "call_id": "76f6a859227f48369bb270438c9c21c6", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.54}
+{"ts": "2026-11-08T21:35:00.102577+00:00", "call_id": "97617d6a24934af0a482a61f42798e58", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:35:02.674079+00:00", "call_id": "97617d6a24934af0a482a61f42798e58", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 2.57}
+{"ts": "2026-11-08T21:35:09.929663+00:00", "call_id": "f18560b77b0e431dbc933552808b6bf6", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:35:14.846584+00:00", "call_id": "f18560b77b0e431dbc933552808b6bf6", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.92}
+{"ts": "2026-11-08T21:35:24.893031+00:00", "call_id": "3609905fe0cf42adb6e2f5ca8df69877", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:35:29.775571+00:00", "call_id": "3609905fe0cf42adb6e2f5ca8df69877", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.88}
+{"ts": "2026-11-08T21:35:38.611432+00:00", "call_id": "d471670970fd4311b43a0b7672a88c2d", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:35:42.963073+00:00", "call_id": "d471670970fd4311b43a0b7672a88c2d", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 4.35}
+{"ts": "2026-11-08T21:35:48.530133+00:00", "call_id": "2f795dfed9db4a649a6cbda3594167c1", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:35:51.963467+00:00", "call_id": "2f795dfed9db4a649a6cbda3594167c1", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.43}
+{"ts": "2026-11-08T21:35:59.351330+00:00", "call_id": "706da6ac04e544ad9e1ea0116dfdef78", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:36:02.553032+00:00", "call_id": "706da6ac04e544ad9e1ea0116dfdef78", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.2}
+{"ts": "2026-11-08T21:36:09.464198+00:00", "call_id": "a24b962919c149b8a30f297798246eb5", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:36:12.687223+00:00", "call_id": "a24b962919c149b8a30f297798246eb5", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 3.22}
+{"ts": "2026-11-08T21:36:14.929543+00:00", "call_id": "c940e23874e240ee99d8c282119e3e9d", "tool": "transcriber", "event": "start"}
+{"ts": "2026-11-08T21:36:17.286696+00:00", "call_id": "c940e23874e240ee99d8c282119e3e9d", "tool": "transcriber", "event": "finish", "success": true, "cost_usd": 0.0, "duration_s": 2.36}

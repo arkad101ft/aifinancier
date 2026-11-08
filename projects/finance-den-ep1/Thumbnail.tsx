@@ -1,15 +1,12 @@
 import React from "react";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Img, staticFile } from "remotion";
 import { C, FONT } from "./lib";
 import { Liam } from "./Liam";
-import { Skyline } from "./ScenesA";
 
 // 1920x1080 thumbnail (exported, then scaled to 1280x720).
 export const Thumbnail: React.FC = () => (
   <AbsoluteFill style={{ background: C.navy, fontFamily: FONT }}>
-    <AbsoluteFill style={{ transform: "scale(1.15)", transformOrigin: "60% 80%" }}>
-      <Skyline t={2} mode="night" />
-    </AbsoluteFill>
+    <Img src={staticFile("img/s07_skyline_day.jpg")} style={{ position: "absolute", width: 1920, height: 1097, top: -8, objectFit: "cover" }} />
     <AbsoluteFill style={{ background: "linear-gradient(90deg, rgba(19,35,58,0.96) 0%, rgba(19,35,58,0.85) 48%, rgba(19,35,58,0) 75%)" }} />
     <AbsoluteFill style={{ paddingLeft: 90, paddingTop: 110 }}>
       <div style={{ fontWeight: 900, fontSize: 64, color: C.blueSoft, letterSpacing: 2 }}>IT WAS NEVER ABOUT TRADE</div>

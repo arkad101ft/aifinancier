@@ -109,12 +109,12 @@
   }
  ],
  "spoken_fixes": {
-  "In 1971, Singapore created the Monetary Authority of Singapore, the MAS.": "In nineteen seventy-one, Singapore created the Monny-tary Aw-thority of Singapore, the M A S.",
-  "9th of August 1965": "ninth of August, nineteen sixty-five",
-  "late 1960s": "late nineteen-sixties",
+  "In 1971": "In nineteen seventy-one",
+  "the MAS.": "the M.A.S.",
   "J. D. van Oenen": "J.D. van Oonen",
   "Van Oenen": "Van Oonen",
-  "Winsemius": "Win-say-mee-us",
+  "9th of August 1965": "ninth of August, nineteen sixty-five",
+  "late 1960s": "late nineteen-sixties",
   "In 1968": "In nineteen sixty-eight",
   "10%": "ten percent",
   "in 1981, under": "in nineteen eighty-one, under",
@@ -140,7 +140,13 @@
   "September 2025": "September twenty twenty-five",
   "August 2023": "August twenty twenty-three",
   "3 billion": "three billion",
-  "2.8 billion": "two point eight billion",
+  "2.8 billion": "two point eight billion"
+ },
+ "piper_fixes": {
+  "In 1971, Singapore created the Monetary Authority of Singapore, the MAS.": "In nineteen seventy-one, Singapore created the Monny-tary Aw-thority of Singapore, the M A S.",
+  "J. D. van Oenen": "J.D. van Oonen",
+  "Van Oenen": "Van Oonen",
+  "Winsemius": "Win-say-mee-us",
   "Hon Sui Sen": "Hon Swee Sen",
   "Goh Keng Swee": "Go Keng Swee"
  }

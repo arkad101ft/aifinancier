@@ -22,15 +22,18 @@ sys.path.insert(0, str(REPO))
 
 from tools.tool_registry import registry  # noqa: E402
 
-VOICE = "en_US-ryan-high"
-LENGTH_SCALE = 1.13        # slower than default: deliberate explainer pace
-PARA_GAP = 0.7            # seconds between paragraphs
-SECTION_GAP = 1.5          # seconds between sections (gold swoosh lives here)
+ENGINE = "kokoro"          # "kokoro" (natural, default) | "piper" (fallback)
+VOICE = "am_liam"          # Kokoro voice chosen by the owner (Voice 7 in the sampler)
+SPEED = 0.92               # Kokoro: ~155 wpm, confident explainer pace
+PIPER_VOICE = "en_US-ryan-high"
+LENGTH_SCALE = 1.13        # Piper only
+PARA_GAP = 0.55           # seconds between paragraphs
+SECTION_GAP = 1.4          # seconds between sections (gold swoosh lives here)
 STING_GAP = 3.2            # after section 1: Finance Den title sting
 LEAD_IN = 0.6
 SR = 48000
 
-work = ROOT / "assets" / "audio" / "paras"
+work = ROOT / "assets" / "audio" / ("paras_" + ENGINE)
 work.mkdir(parents=True, exist_ok=True)
 (ROOT / "public").mkdir(exist_ok=True)
 
@@ -54,6 +57,21 @@ def silence(path: Path, seconds: float) -> None:
          "-t", f"{seconds:.3f}", "-c:a", "pcm_s16le", str(path)], check=True)
 
 
+_KOKORO = None
+
+
+def kokoro_tts(text: str, out: Path) -> None:
+    global _KOKORO
+    import numpy as np
+    import soundfile as sf
+    from kokoro_onnx import Kokoro
+    if _KOKORO is None:
+        home = Path.home() / ".kokoro"
+        _KOKORO = Kokoro(str(home / "kokoro-v1.0.onnx"), str(home / "voices-v1.0.bin"))
+    audio, sr = _KOKORO.create(text, voice=VOICE, speed=SPEED, lang="en-us")
+    sf.write(str(out), np.asarray(audio), sr)
+
+
 def main() -> None:
     registry.discover()
     tts = registry.get("piper_tts")
@@ -62,7 +80,7 @@ def main() -> None:
     fixes = data["spoken_fixes"]
 
     pieces: list[Path] = []
-    timeline = {"voice": VOICE, "temporary": True, "sections": []}
+    timeline = {"voice": f"{ENGINE}:{VOICE if ENGINE == 'kokoro' else PIPER_VOICE}", "temporary": True, "sections": []}
     t = 0.0
 
     def add_silence(sec: float, name: str) -> None:
@@ -126,11 +144,14 @@ def main() -> None:
             raw = work / f"{sec['id']}_{pi:02d}_raw.wav"
             wav = work / f"{sec['id']}_{pi:02d}.wav"
             if not wav.exists():
-                r = tts.execute({"text": spoken(text, fixes), "model": VOICE,
-                                 "length_scale": LENGTH_SCALE, "sentence_silence": 0.32,
-                                 "output_path": str(raw)})
-                if not r.success:
-                    raise SystemExit(f"TTS failed for {sec['id']}#{pi}: {r.error}")
+                if ENGINE == "kokoro":
+                    kokoro_tts(spoken(text, fixes), raw)
+                else:
+                    r = tts.execute({"text": spoken(spoken(text, data.get("piper_fixes", {})), fixes),
+                                     "model": PIPER_VOICE, "length_scale": LENGTH_SCALE,
+                                     "sentence_silence": 0.32, "output_path": str(raw)})
+                    if not r.success:
+                        raise SystemExit(f"TTS failed for {sec['id']}#{pi}: {r.error}")
                 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(raw), "-ar", str(SR),
                                 "-ac", "1", "-c:a", "pcm_s16le", str(wav)], check=True)
             d = duration(wav)
