@@ -337,7 +337,7 @@ export const E06: React.FC = () => (
 export const E07: React.FC = () => (
   <Section id="s07_damage" shots={[
     { at: null, img: "s07_grey_city", move: "in", dim: 0.45, render: ({ t, cu, a }) => (
-      <StatCard t0={a + 0.2} kicker="S&P 500 · OCT 2007 → MAR 2009" big={`−${Math.round(countUp(t, cu("fell 57%") - 0.2, 1.4, 0, 57))}%`} sub="from peak to bottom" />) },
+      <StatCard t0={a + 0.2} kicker="S&P 500 · OCT 2007 → MAR 2009" big={`−${Math.round(countUp(t, a + 0.4, Math.max(1.4, cu("fell 57%") - a), 0, 57))}%`} sub="from peak to bottom" />) },
     { at: "The recession ran", img: "s07_grey_city", move: "out", dim: 0.45, render: ({ cu, a }) => (
       <StatCard t0={a + 0.1} kicker="RECESSION · DEC 2007 → JUN 2009" big="18 months" sub="economy −4.3%, the biggest drop since World War Two" color={C.navy} />) },
     { at: "Unemployment doubled", img: "s07_job_queue", move: "left", dim: 0.45, render: ({ cu, a }) => (
