@@ -26,10 +26,11 @@ These are standing answers, so Claude won't ask them each time.
 ## Look and sound (Finance Den style guide)
 
 - default_pipeline: animated-explainer, atelier mode (illustrated backgrounds + hand-built overlays)
-- look: detailed hand-drawn storybook illustration (ink outlines, vivid full colour, lush, bird's-eye cities),
-  reference: `studio/characters/style-reference.jpg`. Backgrounds are generated locally for free with
-  SDXL-Lightning (`projects/finance-den-ep1/gen_images.py`, ~35 s/image on CPU); numbers, maps, charts and
-  captions are exact code overlays on top; Liam (SVG) is composited over the scene.
+- look: CINEMATIC PAINTING (owner's choice, Nov 2026): semi-realistic digital painting, realistic proportions,
+  soft volumetric light, rich colour. Set `LOOK = "cinematic"` in the project's gen_images.py. The earlier
+  storybook ink style (`LOOK = "illustrated"`, reference `studio/characters/style-reference.jpg`) is still available.
+  Backgrounds are generated locally for free with SDXL-Lightning (~35 s/image on CPU); numbers, maps, charts and
+  captions are exact code overlays on top; Liam (cartoon SVG) is composited over the scene.
 - palette: paper #F7F4EE, navy #13233A, gold #F5A623, muted blue #5B8DEF; red #D93A3F ONLY for losses and crime
 - type: Inter Black / Bold; numbers large and exact, never rounded differently from the narration
 - motion: slow push-ins, numbers count up, maps draw themselves, new image every 3-6 s

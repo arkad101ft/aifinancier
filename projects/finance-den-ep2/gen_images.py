@@ -2,7 +2,7 @@
 
 Usage (repo root):
   source .venv/bin/activate
-  HF_HUB_DISABLE_XET=1 python projects/finance-den-ep1/gen_images.py [scene_id ...]
+  HF_HUB_DISABLE_XET=1 python projects/finance-den-ep2/gen_images.py [scene_id ...]
 
 Reads artifacts/image_prompts.json -> writes public/img/<id>.jpg (skips existing).
 Model: SDXL base text encoders + ByteDance SDXL-Lightning 4-step UNet (OpenRAIL++,
@@ -28,6 +28,10 @@ STYLE_PREFIX = "colorful detailed cartoon illustration, ink outlines, vivid full
 STYLE_PLAIN = "colorful detailed cartoon illustration, clean ink outlines, vivid full color, dramatic lighting"
 NEGATIVE = ("trees indoors, plants indoors, monochrome, grayscale, black and white, sketch, photo, photorealistic, 3d render, blurry, lowres, "
             "text, letters, watermark, logo, deformed, close-up face")
+# Look: "cinematic" (owner's choice for Ep. 2: realistic painted finish) | "illustrated" (Ep. 1 storybook ink)
+LOOK = "cinematic"
+CINEMATIC = "cinematic semi-realistic digital painting, detailed, realistic proportions, soft volumetric light, rich color, concept art"
+CINEMATIC_NEG = "cartoon, comic, ink outlines, anime, photo, text, letters, watermark, logo, deformed, close-up face"
 W, H = 1344, 768   # SDXL-friendly 16:9; upscaled to 1920x1080 in the composition
 STEPS = 4
 
@@ -58,7 +62,8 @@ def main() -> None:
         if pipe is None:
             pipe = load_pipe()
         t0 = time.time()
-        img = pipe(prompt=f"{STYLE_PLAIN if item.get('plain') else STYLE_PREFIX}, {item['prompt']}", negative_prompt=NEGATIVE, width=W, height=H,
+        prefix = CINEMATIC if LOOK == "cinematic" else (STYLE_PLAIN if item.get('plain') else STYLE_PREFIX)
+        img = pipe(prompt=f"{prefix}, {item['prompt']}", negative_prompt=CINEMATIC_NEG if LOOK == "cinematic" else NEGATIVE, width=W, height=H,
                    num_inference_steps=STEPS, guidance_scale=0,
                    generator=torch.Generator("cpu").manual_seed(item.get("seed", 7))).images[0]
         # upscale to 1080p with a light unsharp mask (keeps the ink lines crisp)
