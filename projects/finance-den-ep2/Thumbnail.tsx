@@ -14,6 +14,14 @@ export const Thumbnail: React.FC = () => (
       WebkitTextStroke: `14px ${C.navy}`, paintOrder: "stroke fill" }}>
       ONE<br />HOUSE.
     </div>
+    <svg width={1920} height={1080} style={{ position: "absolute" }}>
+      {/* red crack from under the house across the globe, with falling red arrows (brief) */}
+      <path d="M1010 470 L985 560 L1030 620 L975 720 L1020 800 L960 905 L995 1000" fill="none" stroke="#0B1626" strokeWidth={30} strokeLinejoin="round" />
+      <path d="M1010 470 L985 560 L1030 620 L975 720 L1020 800 L960 905 L995 1000" fill="none" stroke={C.red} strokeWidth={16} strokeLinejoin="round" />
+      {[[640, 760], [780, 900], [1330, 820], [560, 560]].map(([x, y], i) => (
+        <path key={i} d={`M${x} ${y} l0 70 l-26 -26 M${x} ${y + 70} l26 -26`} stroke={C.red} strokeWidth={14} strokeLinecap="round" fill="none" />
+      ))}
+    </svg>
     <div style={{ position: "absolute", left: 90, top: 560, background: C.red, color: C.paper, fontWeight: 900, fontSize: 64,
       padding: "8px 26px", borderRadius: 14 }}>2008</div>
     <div style={{ position: "absolute", left: 1060, bottom: -30, width: 560, height: 750 }}>

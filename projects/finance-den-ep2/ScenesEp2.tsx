@@ -111,8 +111,8 @@ const LeverageTower: React.FC<{ t: number; cu: Ctx["cu"]; a: number }> = ({ t, c
         </svg>
         <div style={{ textAlign: "left", flex: 1 }}>
           <Kicker>LEHMAN BROTHERS, 2008</Kicker>
-          <Rise t0={cu("680 billion")}><Big size={54} weight={800}>assets: about $680 billion</Big></Rise>
-          <Rise t0={cu("22.5 billion")}><Big size={54} weight={800} color={C.navy2}>own capital: $22.5 billion</Big></Rise>
+          <Rise t0={cu("680 billion")}><Big size={46} weight={800}>assets: about $680 billion</Big></Rise>
+          <Rise t0={cu("22.5 billion")}><Big size={46} weight={800} color={C.navy2}>own capital: $22.5 billion</Big></Rise>
           <Rise t0={cu("31 dollars for every")}><Big size={200} color={C.red} style={{ marginTop: 20 }}>31 : 1</Big></Rise>
           <Rise t0={cu("31 dollars for every")}><Big size={36} weight={700} color={C.navy2}>borrowed per dollar owned (2007)</Big></Rise>
         </div>
@@ -176,7 +176,7 @@ const SeptemberCalendar: React.FC<{ t: number; cu: Ctx["cu"] }> = ({ t, cu }) =>
 const RateDial: React.FC<{ t: number; cu: Ctx["cu"] }> = ({ t, cu }) => {
   const k = prog(t, cu("all the way down"), 2.2);
   const rate = 5.25 * (1 - k);
-  const ang = -120 + (rate / 6) * 240;
+  const ang = -90 + (rate / 6) * 180; // semicircle: left = 0%, right = 6%
   return (
     <Card t0={cu("And the Federal Reserve")} width={1400}>
       <div style={{ display: "flex", alignItems: "center", gap: 70 }}>
@@ -277,8 +277,8 @@ export const E04: React.FC = () => (
   <Section id="s04_leverage" shots={[
     { at: null, img: "s04_money_ladder", move: "up", render: ({ cu }) => (
       <Pos x={90} y={80}><Chip t0={cu("They borrowed to buy it")} size={64} gold>They borrowed to buy it.</Chip></Pos>) },
-    { at: "Take Lehman Brothers", img: "s04_tower_on_coins", move: "in", dim: 0.5, render: ({ t, cu, a }) => <LeverageTower t={t} cu={cu} a={a} /> },
-    { at: "Let that sink in", img: "s04_seesaw", move: "in", dim: 0.2, render: ({ cu }) => (
+    { at: "Take Lehman Brothers", img: "s03_wall_street_noon", move: "in", dim: 0.55, render: ({ t, cu, a }) => <LeverageTower t={t} cu={cu} a={a} /> },
+    { at: "Let that sink in", img: "s04_tower_on_coins", move: "up", dim: 0.25, render: ({ cu }) => (
       <Pos center y={140}><Head t0={cu("fall by just over 3%")} size={96}>Fall just over 3%</Head>
         <RedChip t0={cu("your own money is gone")} size={90}>→ WIPED OUT</RedChip></Pos>) },
     { at: "It's like buying a house", img: "s04_no_deposit", move: "right", render: ({ cu }) => (

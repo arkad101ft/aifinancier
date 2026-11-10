@@ -129,9 +129,9 @@
   },
   {
    "id": "s03_house_of_cards",
-   "seed": 28,
+   "seed": 51,
    "plain": true,
-   "prompt": "enormous house of cards built from paper documents in a grand hall, people seen from behind admiring it"
+   "prompt": "tall fragile house of cards made of playing cards on a table, tiny model houses on top, wobbling, people seen from behind watching"
   },
   {
    "id": "s04_money_ladder",
@@ -147,9 +147,9 @@
   },
   {
    "id": "s04_seesaw",
-   "seed": 26,
-   "plain": false,
-   "prompt": "giant seesaw in a city park, one side piled high with gold coins, the other side almost empty, sunny"
+   "seed": 52,
+   "plain": true,
+   "prompt": "wooden playground seesaw in a park, one end piled high with gold coins touching the ground, the other end high in the air almost empty"
   },
   {
    "id": "s04_no_deposit",
@@ -159,21 +159,21 @@
   },
   {
    "id": "s05_price_signs",
-   "seed": 2,
-   "plain": false,
-   "prompt": "suburban street with many for-sale signs, falling price tags, autumn leaves, overcast sky"
+   "seed": 56,
+   "plain": true,
+   "prompt": "suburban street lined with dozens of for-sale signs with red downward arrows, autumn leaves, overcast sky"
   },
   {
    "id": "s05_foreclosure",
-   "seed": 33,
-   "plain": false,
-   "prompt": "empty foreclosed houses with boarded windows and overgrown lawns, grey sky, empty street"
+   "seed": 53,
+   "plain": true,
+   "prompt": "run-down abandoned houses with boarded-up windows, overgrown brown lawns, red foreclosure notices on the doors, grey sky"
   },
   {
    "id": "s05_dry_pipe",
-   "seed": 36,
+   "seed": 55,
    "plain": true,
-   "prompt": "large money pipeline running from suburban houses to skyscrapers, almost dry, only a few coins trickling out"
+   "prompt": "big rusty water pipe running from houses to a city, cracked and dry, only a few gold coins dripping out the end, desert dust"
   },
   {
    "id": "s05_question_marks",
@@ -207,9 +207,9 @@
   },
   {
    "id": "s06_domino_towers",
-   "seed": 27,
+   "seed": 54,
    "plain": true,
-   "prompt": "glass bank skyscraper toppling like a domino into a row of other skyscrapers, dust clouds, dramatic sky"
+   "prompt": "row of skyscrapers falling over like dominoes, the first glass tower tipping into the next, dust clouds, dramatic sky"
   },
   {
    "id": "s06_life_ring",

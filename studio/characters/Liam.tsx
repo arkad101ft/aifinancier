@@ -5,8 +5,8 @@ import { C } from "./lib";
 // Liam the Lion — SVG puppet rebuilt from the owner's reference image.
 // viewBox 0 0 300 400; origin of the figure's feet ≈ (150, 380).
 
-export type Expression = "happy" | "smug" | "curious" | "wince" | "impressed" | "yawn";
-export type Pose = "idle" | "crossed" | "point" | "wave";
+export type Expression = "happy" | "smug" | "curious" | "wince" | "impressed" | "yawn" | "serious";
+export type Pose = "idle" | "crossed" | "point" | "wave" | "head";
 
 const OUT = "#1B1B1B";
 const SW = 5;
@@ -87,6 +87,12 @@ const Eyes: React.FC<{ expr: Expression; blink: boolean }> = ({ expr, blink }) =
           <circle cx={R + 2.5} cy={Y - 3} r={2.6} />
         </g>
       ) : null}
+      {expr === "serious" ? (
+        <g stroke={OUT} strokeWidth={4} strokeLinecap="round">
+          <line x1={L - 11} y1={Y - 15} x2={L + 10} y2={Y - 13} />
+          <line x1={R - 10} y1={Y - 13} x2={R + 11} y2={Y - 15} />
+        </g>
+      ) : null}
       {expr === "curious" ? (
         <g stroke={OUT} strokeWidth={4} strokeLinecap="round" fill="none">
           <path d={`M${L - 12} ${Y - 18} Q${L} ${Y - 26} ${L + 11} ${Y - 19}`} />
@@ -128,6 +134,8 @@ const Mouth: React.FC<{ expr: Expression; talk: number }> = ({ expr, talk }) => 
         {h > 9 ? <ellipse cx={150} cy={158 + h * 0.95} rx={6} ry={3} fill="#E37A7A" /> : null}
       </g>
     );
+  } else if (expr === "serious") {
+    m = <path d="M139 161 L161 161" fill="none" stroke={OUT} strokeWidth={4.5} strokeLinecap="round" />;
   } else if (expr === "smug") {
     m = <path d="M137 160 Q147 166 163 156" fill="none" stroke={OUT} strokeWidth={4.5} strokeLinecap="round" />;
   } else {
@@ -151,6 +159,7 @@ export const Liam: React.FC<{
   let lArm = 14, rArm = -14; // idle: arms down, slightly out
   if (pose === "point") rArm = -118;
   if (pose === "wave") rArm = -138 + wave;
+  if (pose === "head") { lArm = 171; rArm = -171; }
 
   return (
     <svg viewBox="0 0 300 400" width="100%" height="100%" style={{ overflow: "visible" }}>
@@ -171,7 +180,7 @@ export const Liam: React.FC<{
         </g>
         <g transform={`translate(0 ${breathe * 0.4})`}>
           {/* back arm (viewer's left) */}
-          {pose !== "crossed" ? <Arm x={104} y={204} angle={lArm} /> : null}
+          {pose !== "crossed" && pose !== "head" ? <Arm x={104} y={204} angle={lArm} /> : null}
           {/* torso: shirt + vest */}
           <path d="M106 196 Q150 184 194 196 L198 290 Q150 300 102 290 Z" fill={SHIRT} stroke={OUT} strokeWidth={SW} />
           <path d="M108 198 Q132 190 146 196 L146 292 Q124 292 104 288 Z" fill={VEST} stroke={OUT} strokeWidth={SW}
@@ -224,6 +233,11 @@ export const Liam: React.FC<{
         {/* raised arm drawn over the mane */}
         {pose === "point" || pose === "wave" ? (
           <g transform={`translate(0 ${breathe * 0.4})`}><Arm x={196} y={204} angle={rArm} /></g>
+        ) : null}
+        {pose === "head" ? (
+          <g transform={`translate(0 ${breathe * 0.4})`}>
+            <Arm x={104} y={204} angle={lArm} /><Arm x={196} y={204} angle={rArm} />
+          </g>
         ) : null}
       </g>
     </svg>
