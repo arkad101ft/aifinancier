@@ -217,7 +217,7 @@ export const E01: React.FC = () => (
       <Stamp t0={cu("filed for bankruptcy")} color={C.red} rot={-6} size={96} style={{ right: 140, bottom: 170 }}>BANKRUPT</Stamp></>) },
     { at: "Lehman Brothers owed", img: "s01_wall_street", move: "in", dim: 0.35, render: ({ t, cu, a }) => (
       <Pos center y={250}><Head t0={cu("Lehman Brothers owed")} size={80}>Lehman Brothers owed</Head>
-        <Big size={190} color={C.gold} style={{ textShadow: "0 8px 0 #0B1626", fontVariantNumeric: "tabular-nums" }}>${Math.round(countUp(t, a + 0.2, Math.max(1.6, cu("619 billion") - a), 0, 619))} BILLION</Big>
+        <Rise t0={a + 0.45}><Big size={190} color={C.gold} style={{ textShadow: "0 8px 0 #0B1626", fontVariantNumeric: "tabular-nums" }}>${Math.round(countUp(t, a + 0.45, Math.max(1.4, cu("619 billion") - a - 0.25), 1, 619))} BILLION</Big></Rise>
         <Chip t0={cu("biggest bankruptcy")} size={50}>the biggest bankruptcy in US history</Chip></Pos>) },
     { at: "That same day", img: "s01_red_board", move: "left", render: ({ cu }) => (
       <Pos x={90} y={80}><RedChip t0={cu("fell more than 500")} size={80}>Dow −500</RedChip></Pos>) },
