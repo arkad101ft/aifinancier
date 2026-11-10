@@ -1,0 +1,305 @@
+{
+ "note": "Ep.2 prompts. plain=no-trees style prefix.",
+ "images": [
+  {
+   "id": "s01_bank_tower_dawn",
+   "seed": 3,
+   "plain": false,
+   "prompt": "grand old stone bank skyscraper in Manhattan at dawn, employees seen from behind walking out carrying cardboard boxes"
+  },
+  {
+   "id": "s01_red_board",
+   "seed": 5,
+   "plain": true,
+   "prompt": "trading floor with a giant board of falling red numbers and red arrows, traders seen from behind holding their heads"
+  },
+  {
+   "id": "s01_wall_street",
+   "seed": 8,
+   "plain": false,
+   "prompt": "busy New York financial district street, tall old stone buildings, yellow taxis, crowds seen from behind, grey sky"
+  },
+  {
+   "id": "s01_lost_jobs",
+   "seed": 11,
+   "plain": false,
+   "prompt": "city street with closed shops, for-sale signs, people seen from behind carrying cardboard boxes, autumn"
+  },
+  {
+   "id": "s01_world_storm",
+   "seed": 14,
+   "plain": true,
+   "prompt": "planet earth from space with dark storm clouds spreading across all continents, lightning, stars"
+  },
+  {
+   "id": "s01_one_house",
+   "seed": 17,
+   "plain": false,
+   "prompt": "one ordinary suburban house with a white picket fence on a quiet sunny street"
+  },
+  {
+   "id": "s01_house_globe",
+   "seed": 23,
+   "plain": true,
+   "prompt": "small suburban house standing on top of a giant globe, a deep crack spreading from under the house across the globe, navy sky"
+  },
+  {
+   "id": "s01_case_file",
+   "seed": 29,
+   "plain": true,
+   "prompt": "detective desk with a thick paper case file folder, red stamp, desk lamp, magnifying glass, dark dramatic room"
+  },
+  {
+   "id": "s02_suburb_sold",
+   "seed": 4,
+   "plain": false,
+   "prompt": "sunny American suburb with rows of new houses, many for-sale and sold signs on the lawns, families seen from behind"
+  },
+  {
+   "id": "s02_cheap_money",
+   "seed": 9,
+   "plain": false,
+   "prompt": "dollar bills raining down from the sky onto a happy suburban neighborhood, sunny"
+  },
+  {
+   "id": "s02_loan_officer",
+   "seed": 12,
+   "plain": true,
+   "prompt": "bank loan officer at a desk stamping a huge pile of loan forms with a rubber stamp, long queue of customers seen from behind"
+  },
+  {
+   "id": "s02_kitchen_bills",
+   "seed": 15,
+   "plain": true,
+   "prompt": "young couple seen from behind at a kitchen table covered with bills and letters, worried, small apartment, evening"
+  },
+  {
+   "id": "s02_calendar_piggy",
+   "seed": 18,
+   "plain": true,
+   "prompt": "wall calendar above a desk with a piggy bank and a stack of bills, sunlight through a window"
+  },
+  {
+   "id": "s02_lender_sells",
+   "seed": 21,
+   "plain": true,
+   "prompt": "mortgage lender workers loading bundles of paper contracts onto a truck behind an office, seen from behind"
+  },
+  {
+   "id": "s03_wall_street_noon",
+   "seed": 6,
+   "plain": false,
+   "prompt": "New York financial district skyline at midday, unbranded glass skyscrapers, bankers in suits seen from behind"
+  },
+  {
+   "id": "s03_giant_pot",
+   "seed": 10,
+   "plain": true,
+   "prompt": "giant cooking pot in a factory, thousands of paper documents and tiny toy houses being poured in from conveyor belts"
+  },
+  {
+   "id": "s03_bond_factory",
+   "seed": 13,
+   "plain": true,
+   "prompt": "factory conveyor belt turning paper documents into shiny golden bond certificates, workers seen from behind, steam"
+  },
+  {
+   "id": "s03_layer_cake",
+   "seed": 16,
+   "plain": true,
+   "prompt": "giant layered cake made of stacked paper documents, chefs seen from behind slicing it, bakery kitchen"
+  },
+  {
+   "id": "s03_stamp_machine",
+   "seed": 19,
+   "plain": true,
+   "prompt": "giant rubber stamp on a mechanical arm slamming down on documents on a conveyor belt, office factory"
+  },
+  {
+   "id": "s03_nevada_house",
+   "seed": 22,
+   "plain": false,
+   "prompt": "small cheap house in the Nevada desert, cactus, dusty road, hot sun"
+  },
+  {
+   "id": "s03_norway_harbour",
+   "seed": 25,
+   "plain": false,
+   "prompt": "snowy Norwegian harbour city with colorful wooden houses, fjord, a modern office building"
+  },
+  {
+   "id": "s03_house_of_cards",
+   "seed": 28,
+   "plain": true,
+   "prompt": "enormous house of cards built from paper documents in a grand hall, people seen from behind admiring it"
+  },
+  {
+   "id": "s04_money_ladder",
+   "seed": 7,
+   "plain": false,
+   "prompt": "banker seen from behind climbing a very tall wobbly ladder made of stacked banknotes into the clouds"
+  },
+  {
+   "id": "s04_tower_on_coins",
+   "seed": 20,
+   "plain": true,
+   "prompt": "a very tall skyscraper balanced on a tiny pile of coins, dramatic sky, wind"
+  },
+  {
+   "id": "s04_seesaw",
+   "seed": 26,
+   "plain": false,
+   "prompt": "giant seesaw in a city park, one side piled high with gold coins, the other side almost empty, sunny"
+  },
+  {
+   "id": "s04_no_deposit",
+   "seed": 31,
+   "plain": false,
+   "prompt": "family seen from behind looking up at a big new house, holding an empty wallet, sold sign"
+  },
+  {
+   "id": "s05_price_signs",
+   "seed": 2,
+   "plain": false,
+   "prompt": "suburban street with many for-sale signs, falling price tags, autumn leaves, overcast sky"
+  },
+  {
+   "id": "s05_foreclosure",
+   "seed": 33,
+   "plain": false,
+   "prompt": "empty foreclosed houses with boarded windows and overgrown lawns, grey sky, empty street"
+  },
+  {
+   "id": "s05_dry_pipe",
+   "seed": 36,
+   "plain": true,
+   "prompt": "large money pipeline running from suburban houses to skyscrapers, almost dry, only a few coins trickling out"
+  },
+  {
+   "id": "s05_question_marks",
+   "seed": 39,
+   "plain": true,
+   "prompt": "trading desk where documents turn into big floating question marks, traders seen from behind scratching their heads"
+  },
+  {
+   "id": "s05_dark_tower",
+   "seed": 42,
+   "plain": true,
+   "prompt": "dark unbranded investment bank skyscraper at night with a giant price tag hanging from it, storm clouds"
+  },
+  {
+   "id": "s05_lighthouse",
+   "seed": 45,
+   "plain": true,
+   "prompt": "lighthouse flashing a warning light over a stormy sea, small ships sailing past ignoring it"
+  },
+  {
+   "id": "s06_calendar_wind",
+   "seed": 1,
+   "plain": true,
+   "prompt": "calendar pages flying off a wall calendar in a windy office, stormy window, papers everywhere"
+  },
+  {
+   "id": "s06_gov_building",
+   "seed": 24,
+   "plain": false,
+   "prompt": "big neoclassical government building in Washington with columns, black cars outside, officials seen from behind"
+  },
+  {
+   "id": "s06_domino_towers",
+   "seed": 27,
+   "plain": true,
+   "prompt": "glass bank skyscraper toppling like a domino into a row of other skyscrapers, dust clouds, dramatic sky"
+  },
+  {
+   "id": "s06_life_ring",
+   "seed": 30,
+   "plain": true,
+   "prompt": "helicopter throwing a giant life ring to a sinking skyscraper in a flooded city, stormy sky"
+  },
+  {
+   "id": "s06_frozen_city",
+   "seed": 34,
+   "plain": true,
+   "prompt": "financial district frozen in ice and snow, icicles hanging from bank buildings, people seen from behind shivering"
+  },
+  {
+   "id": "s06_capitol_night",
+   "seed": 37,
+   "plain": true,
+   "prompt": "the United States Capitol dome at night, lights on, dramatic clouds"
+  },
+  {
+   "id": "s06_rate_dial",
+   "seed": 40,
+   "plain": true,
+   "prompt": "giant brass control dial with a needle on a marble wall in a grand central bank hall, warm light"
+  },
+  {
+   "id": "s06_money_printer",
+   "seed": 43,
+   "plain": true,
+   "prompt": "huge machines printing money in a vault, stacks of dollars rolling out on conveyor belts"
+  },
+  {
+   "id": "s07_grey_city",
+   "seed": 3,
+   "plain": true,
+   "prompt": "grey rainy city skyline, empty streets, gloomy mood, muted colors"
+  },
+  {
+   "id": "s07_job_queue",
+   "seed": 6,
+   "plain": false,
+   "prompt": "long queue of people seen from behind outside an unemployment office in the rain, umbrellas"
+  },
+  {
+   "id": "s07_empty_wallet",
+   "seed": 9,
+   "plain": true,
+   "prompt": "empty open wallet and a few coins on a kitchen table, unpaid bills, rain on the window"
+  },
+  {
+   "id": "s07_moving_out",
+   "seed": 12,
+   "plain": false,
+   "prompt": "row of foreclosed houses with moving trucks, families seen from behind carrying boxes, grey day"
+  },
+  {
+   "id": "s08_report_desk",
+   "seed": 15,
+   "plain": true,
+   "prompt": "thick government report on a desk under a lamp with a magnifying glass and reading glasses, dark office"
+  },
+  {
+   "id": "s08_empty_sentry",
+   "seed": 18,
+   "plain": true,
+   "prompt": "empty guard sentry box at a gate at night, abandoned, fog, a single street lamp"
+  },
+  {
+   "id": "s08_blackboard",
+   "seed": 21,
+   "plain": true,
+   "prompt": "classroom blackboard with chalk and books on the ledge, warm afternoon light, empty classroom"
+  },
+  {
+   "id": "s08_inspector",
+   "seed": 24,
+   "plain": true,
+   "prompt": "inspector seen from behind with a flashlight checking a giant machine with gears in a dark factory"
+  },
+  {
+   "id": "s09_house_globe_dusk",
+   "seed": 23,
+   "plain": true,
+   "prompt": "small suburban house standing on top of a cracked globe at sunset, warm orange sky"
+  },
+  {
+   "id": "s09_black_monday",
+   "seed": 32,
+   "plain": true,
+   "prompt": "1987 stock exchange trading floor in chaos, red screens, traders seen from behind with hands on heads, papers flying"
+  }
+ ]
+}
