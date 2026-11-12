@@ -17,8 +17,8 @@ const LINES = timeline.lines;
 type Kind = 0 | 1 | 2; // zebra, giraffe, hippo
 const Friend: React.FC<{ kind: Kind; x: number; y: number; h: number; flip?: boolean; expr?: Expr; arms?: Arms; t: number; bob?: number; rot?: number; sx?: number; sy?: number }> = ({
   kind, x, y, h, flip, expr = "neutral", arms = "down", t, bob = 0, rot = 0, sx = 1, sy = 1 }) => {
-  const H = kind === 1 ? h * 560 / 420 : h;
-  const W = H * 300 / (kind === 1 ? 560 : 420);
+  const H = kind === 1 ? h * 556 / 484 : h;
+  const W = H * 300 / (kind === 1 ? 556 : 484);
   const Comp = kind === 0 ? Zebra : kind === 1 ? Giraffe : Hippo;
   return (
     <div style={{ position: "absolute", left: x - W / 2, top: y - H - bob, width: W, height: H,
@@ -212,7 +212,7 @@ const Stand: React.FC<{ L: Layout; t: number }> = ({ L, t }) => {
         return <Friend key={i} kind={kind} x={qx} y={qy + (1 - p) * 60} h={fh * qs} t={t} bob={Math.abs(Math.sin(t * 6 + i)) * 6} flip={qx > s.x} />;
       }) : null}
       <StandBack L={L} doorOpen={doorOpen}
-        interior={t > 33.9 ? <div style={{ position: "absolute", left: "50%", bottom: 0, width: mumH * 320 / 460, height: mumH, transform: "translateX(-50%)" }}><Mum /></div> : null} />
+        interior={t > 33.9 ? <div style={{ position: "absolute", left: "50%", bottom: 0, width: mumH * 300 / 484, height: mumH, transform: "translateX(-50%)" }}><Mum /></div> : null} />
       {/* Liam behind the counter */}
       {/* clipped at the floor line so he can rise from behind the counter without legs showing below it */}
       <div style={{ position: "absolute", left: 0, top: 0, width: L.W, height: L.floorY, overflow: "hidden" }}>
@@ -298,7 +298,7 @@ const CloseUp: React.FC<{ L: Layout; t: number; tReal: number }> = ({ L, t, tRea
           <rect x={doorX} y={doorTop} width={doorW} height={L.H} fill="#3B2A1E" stroke={C.ink} strokeWidth={8} />
           <rect x={doorX + doorW - 70} y={doorTop} width={70} height={L.H} fill={C.wood} stroke={C.ink} strokeWidth={6} />
         </svg>
-        <div style={{ position: "absolute", left: cu.mumX - cu.mumH * 320 / 460 / 2, top: cu.mumY - cu.mumH, width: cu.mumH * 320 / 460, height: cu.mumH }}>
+        <div style={{ position: "absolute", left: cu.mumX - cu.mumH * 300 / 484 / 2, top: cu.mumY - cu.mumH, width: cu.mumH * 300 / 484, height: cu.mumH }}>
           <Mum browUp={0.4 + 0.6 * brow} />
         </div>
         <Liam x={cu.liamX} y={cu.liamY} h={cu.liamH} t={t} fx={{ sweat, bang }} shake={t < FREEZE_AT ? 2 : 0} tilt={-3} />

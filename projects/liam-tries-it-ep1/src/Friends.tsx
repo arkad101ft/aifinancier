@@ -1,196 +1,226 @@
 import React from "react";
-import { C } from "./lib";
 
-// Original flat cartoon animals matching Liam: bold black outlines, round shapes, flat colours.
-// Each: expressions neutral | happy | angry; arms down | reach (paw held out) | up.
+// Original animals drawn to match Liam (public/liam.png): his proportions (big round head ≈45% of height,
+// face drawn as a circle, short torso, short legs, arms hanging close), his face (small dot eyes set wide,
+// cream muzzle oval, tiny dark nose, "w" smile + chin line), muted warm colours with soft shading,
+// a medium black outline, and clothes. Geometry is measured off liam.png (612×987 → 300×484).
+// Expressions: neutral | happy | angry.  Arms: down | reach (paw held out) | up.
 export type Expr = "neutral" | "happy" | "angry";
 export type Arms = "down" | "reach" | "up";
-const INK = C.ink;
-const SW = 6;
 
-const Face: React.FC<{ cx: number; cy: number; gap: number; expr: Expr; mouthY: number; mouthW?: number; dark?: string }> = ({
-  cx, cy, gap, expr, mouthY, mouthW = 26, dark = INK }) => {
-  const L = cx - gap, R = cx + gap;
+const INK = "#1E1E1E";
+const SW = 4.2; // ≈ Liam's outline weight at this scale
+export const VIEW_H = { zebra: 484, giraffe: 556, hippo: 484, mum: 484 };
+
+const armAngles = (arms: Arms): [number, number] => (arms === "reach" ? [10, -80] : arms === "up" ? [152, -152] : [8, -8]);
+
+/** soft radial shading like Liam's face (lighter centre, slightly darker rim) */
+const Shade: React.FC<{ id: string; c: string; rim: string }> = ({ id, c, rim }) => (
+  <radialGradient id={id} cx="50%" cy="42%" r="62%">
+    <stop offset="0.55" stopColor={c} />
+    <stop offset="1" stopColor={rim} />
+  </radialGradient>
+);
+
+/** Liam-style face: dot eyes, cream muzzle, tiny nose, "w" mouth and chin line. */
+const LiamFace: React.FC<{ cx: number; cy: number; expr: Expr; muzzle: string; muzzleRx?: number; muzzleRy?: number; nose?: string; t: number }> = ({
+  cx, cy, expr, muzzle, muzzleRx = 62, muzzleRy = 44, nose = "#2A1E18", t }) => {
+  const eyeY = cy - 8, L = cx - 34, R = cx + 34, mY = cy + 40;
   return (
     <g>
+      <ellipse cx={cx} cy={cy + 40} rx={muzzleRx} ry={muzzleRy} fill={muzzle} />
       {expr === "happy" ? (
-        <g stroke={dark} strokeWidth={5} fill="none" strokeLinecap="round">
-          <path d={`M${L - 10} ${cy + 3} Q${L} ${cy - 9} ${L + 10} ${cy + 3}`} />
-          <path d={`M${R - 10} ${cy + 3} Q${R} ${cy - 9} ${R + 10} ${cy + 3}`} />
+        <g stroke={INK} strokeWidth={4.2} fill="none" strokeLinecap="round">
+          <path d={`M${L - 8} ${eyeY + 3} Q${L} ${eyeY - 7} ${L + 8} ${eyeY + 3}`} />
+          <path d={`M${R - 8} ${eyeY + 3} Q${R} ${eyeY - 7} ${R + 8} ${eyeY + 3}`} />
         </g>
       ) : (
-        <g fill={dark}><circle cx={L} cy={cy} r={7} /><circle cx={R} cy={cy} r={7} /></g>
+        <g fill={INK}><circle cx={L} cy={eyeY} r={6.2} /><circle cx={R} cy={eyeY} r={6.2} /></g>
       )}
       {expr === "angry" ? (
-        <g stroke={dark} strokeWidth={6} strokeLinecap="round">
-          <line x1={L - 14} y1={cy - 22} x2={L + 10} y2={cy - 11} />
-          <line x1={R + 14} y1={cy - 22} x2={R - 10} y2={cy - 11} />
+        <g stroke={INK} strokeWidth={4.6} strokeLinecap="round">
+          <line x1={L - 12} y1={eyeY - 19} x2={L + 9} y2={eyeY - 10} />
+          <line x1={R + 12} y1={eyeY - 19} x2={R - 9} y2={eyeY - 10} />
         </g>
       ) : null}
+      {/* nose */}
+      <path d={`M${cx - 10} ${mY - 16} Q${cx} ${mY - 21} ${cx + 10} ${mY - 16} Q${cx + 6} ${mY - 7} ${cx} ${mY - 6} Q${cx - 6} ${mY - 7} ${cx - 10} ${mY - 16} Z`} fill={nose} />
       {expr === "happy" ? (
-        <path d={`M${cx - mouthW} ${mouthY - 4} Q${cx} ${mouthY + 26} ${cx + mouthW} ${mouthY - 4} Z`} fill="#7A2B33" stroke={dark} strokeWidth={5} strokeLinejoin="round" />
+        <path d={`M${cx - 22} ${mY - 2} Q${cx} ${mY + 24} ${cx + 22} ${mY - 2} Z`} fill="#8A3B3B" stroke={INK} strokeWidth={4} strokeLinejoin="round" />
       ) : expr === "angry" ? (
-        <path d={`M${cx - mouthW * 0.8} ${mouthY + 8} Q${cx} ${mouthY - 8} ${cx + mouthW * 0.8} ${mouthY + 8}`} fill="none" stroke={dark} strokeWidth={6} strokeLinecap="round" />
+        <path d={`M${cx - 18} ${mY + 8} Q${cx - 9} ${mY - 2} ${cx} ${mY + 2} Q${cx + 9} ${mY - 2} ${cx + 18} ${mY + 8}`} fill="none" stroke={INK} strokeWidth={4} strokeLinecap="round" />
       ) : (
-        <path d={`M${cx - mouthW * 0.7} ${mouthY} Q${cx} ${mouthY + 12} ${cx + mouthW * 0.7} ${mouthY}`} fill="none" stroke={dark} strokeWidth={5} strokeLinecap="round" />
+        <g fill="none" stroke={INK} strokeWidth={4} strokeLinecap="round">
+          <path d={`M${cx} ${mY - 6} L${cx} ${mY - 1} M${cx - 22} ${mY - 2} Q${cx - 11} ${mY + 9} ${cx} ${mY - 1} Q${cx + 11} ${mY + 9} ${cx + 22} ${mY - 2}`} />
+          <path d={`M${cx - 6} ${mY + 12} Q${cx + 2} ${mY + 15} ${cx + 9} ${mY + 11}`} strokeWidth={3} />
+        </g>
       )}
+      {expr === "angry" ? (
+        <g opacity={0.92}>
+          {[-1, 1].map((s) => {
+            const k = (t * 1.6 + (s > 0 ? 0.5 : 0)) % 1;
+            return <circle key={s} cx={cx + s * (98 + 26 * k)} cy={cy - 70 - 40 * k} r={9 + 9 * k} fill="#FFFFFF" stroke={INK} strokeWidth={3.5} opacity={1 - k} />;
+          })}
+        </g>
+      ) : null}
     </g>
   );
 };
 
-/** limb: rounded capsule rotated about its top (shoulder/hip) */
-const Limb: React.FC<{ x: number; y: number; len: number; w: number; angle: number; fill: string; end: string; stripes?: boolean }> = ({
-  x, y, len, w, angle, fill, end, stripes }) => (
-  <g transform={`translate(${x},${y}) rotate(${angle})`}>
-    <rect x={-w / 2} y={-w / 2} width={w} height={len} rx={w / 2} fill={fill} stroke={INK} strokeWidth={SW} />
-    {stripes ? [0.3, 0.55].map((k) => <line key={k} x1={-w / 2 + 3} x2={w / 2 - 3} y1={len * k} y2={len * k + 6} stroke={INK} strokeWidth={6} />) : null}
-    <ellipse cx={0} cy={len - w / 2 + 2} rx={w / 2 + 3} ry={w / 2.2} fill={end} stroke={INK} strokeWidth={SW} />
-  </g>
-);
-
-const armAngles = (arms: Arms): [number, number] =>
-  arms === "reach" ? [12, -78] : arms === "up" ? [150, -150] : [12, -12];
-
-/** Steam puffs for angry faces */
-const Steam: React.FC<{ x: number; y: number; on: boolean; t: number }> = ({ x, y, on, t }) =>
-  on ? (
-    <g opacity={0.9}>
-      {[-1, 1].map((s) => {
-        const k = (t * 1.6 + (s > 0 ? 0.5 : 0)) % 1;
-        return <circle key={s} cx={x + s * (40 + 30 * k)} cy={y - 20 - 50 * k} r={10 + 10 * k} fill="#fff" stroke={INK} strokeWidth={4} opacity={1 - k} />;
-      })}
+type BodyProps = {
+  arms: Arms; skin: string; skinRim: string; shirt: string; outfit?: React.ReactNode; legStripes?: boolean; tail: React.ReactNode; id: string;
+};
+/** Liam's body plan: tail, legs + feet, torso in a shirt, optional outfit layer, hanging arms with sleeves and paws. */
+const Body: React.FC<BodyProps> = ({ arms, skin, skinRim, shirt, outfit, legStripes, tail, id }) => {
+  const [la, ra] = armAngles(arms);
+  const Arm = ({ x, a }: { x: number; a: number }) => (
+    <g transform={`translate(${x} 228) rotate(${a})`}>
+      <rect x={-17} y={-12} width={34} height={102} rx={16} fill={shirt} stroke={INK} strokeWidth={SW} />
+      <circle cx={0} cy={100} r={18} fill={skin} stroke={INK} strokeWidth={SW} />
+      <path d="M-8 108 v8 M0 110 v8 M8 108 v8" stroke={INK} strokeWidth={2.4} strokeLinecap="round" opacity={0.7} />
     </g>
-  ) : null;
+  );
+  return (
+    <g>
+      {tail}
+      {[124, 176].map((x) => (
+        <g key={x}>
+          <rect x={x - 17} y={322} width={34} height={142} rx={15} fill={skin} stroke={INK} strokeWidth={SW} />
+          {legStripes ? [356, 388, 420].map((y) => <path key={y} d={`M${x - 15} ${y} q15 8 30 0`} stroke="#3C3C3C" strokeWidth={7} fill="none" />) : null}
+          <ellipse cx={x + (x < 150 ? -4 : 4)} cy={466} rx={24} ry={13} fill={skin} stroke={INK} strokeWidth={SW} />
+        </g>
+      ))}
+      <path d="M80 222 Q150 196 220 222 L226 338 Q150 352 74 338 Z" fill={shirt} stroke={INK} strokeWidth={SW} strokeLinejoin="round" />
+      {outfit}
+      <Arm x={84} a={la} />
+      <Arm x={216} a={ra} />
+      <defs><Shade id={id} c={skin} rim={skinRim} /></defs>
+    </g>
+  );
+};
 
 export const Zebra: React.FC<{ expr?: Expr; arms?: Arms; t?: number }> = ({ expr = "neutral", arms = "down", t = 0 }) => {
-  const [la, ra] = armAngles(arms);
-  const W = "#FFFFFF";
+  const W = "#F4F1EA", rim = "#DCD6CA", ST = "#3C3C3C";
   return (
-    <svg viewBox="0 0 300 420" width="100%" height="100%" style={{ overflow: "visible" }}>
-      {/* tail */}
-      <path d="M190 300 Q235 320 230 350" fill="none" stroke={INK} strokeWidth={SW} />
-      <path d="M222 344 l18 22 l-22 -2 Z" fill={INK} />
-      {/* legs */}
-      <Limb x={128} y={318} len={92} w={34} angle={4} fill={W} end="#3A3A3A" stripes />
-      <Limb x={172} y={318} len={92} w={34} angle={-4} fill={W} end="#3A3A3A" stripes />
-      {/* body */}
-      <rect x={96} y={210} width={108} height={128} rx={44} fill={W} stroke={INK} strokeWidth={SW} />
-      {[240, 268, 296].map((y) => <path key={y} d={`M${100} ${y} Q150 ${y + 14} ${200} ${y}`} fill="none" stroke={INK} strokeWidth={7} />)}
-      {/* arms */}
-      <Limb x={104} y={228} len={86} w={30} angle={la} fill={W} end="#3A3A3A" stripes />
-      <Limb x={196} y={228} len={86} w={30} angle={ra} fill={W} end="#3A3A3A" stripes />
-      {/* ears + mane */}
-      <ellipse cx={108} cy={62} rx={16} ry={34} transform="rotate(-24 108 62)" fill={W} stroke={INK} strokeWidth={SW} />
-      <ellipse cx={192} cy={62} rx={16} ry={34} transform="rotate(24 192 62)" fill={W} stroke={INK} strokeWidth={SW} />
-      <path d="M120 70 l10 -28 l10 22 l10 -28 l10 22 l10 -28 l10 26 Z" fill={INK} />
-      {/* head */}
-      <ellipse cx={150} cy={138} rx={64} ry={74} fill={W} stroke={INK} strokeWidth={SW} />
-      <path d="M96 106 Q114 112 120 98 M92 132 Q110 138 116 124 M204 106 Q186 112 180 98 M208 132 Q190 138 184 124" stroke={INK} strokeWidth={7} fill="none" strokeLinecap="round" />
-      <ellipse cx={150} cy={182} rx={46} ry={32} fill="#D4D4D4" stroke={INK} strokeWidth={SW} />
-      <ellipse cx={134} cy={176} rx={6} ry={8} fill={INK} /><ellipse cx={166} cy={176} rx={6} ry={8} fill={INK} />
-      <Face cx={150} cy={126} gap={30} expr={expr} mouthY={196} mouthW={20} />
-      <Steam x={150} y={60} on={expr === "angry"} t={t} />
+    <svg viewBox="0 0 300 484" width="100%" height="100%" style={{ overflow: "visible" }}>
+      <defs><Shade id="zf" c={W} rim={rim} /></defs>
+      <Body id="zb" arms={arms} skin={W} skinRim={rim} shirt="#E8B75F" legStripes
+        tail={<g><path d="M206 330 Q248 342 248 372" fill="none" stroke={INK} strokeWidth={SW + 1} /><path d="M240 366 q10 8 16 22 q-14 2 -22 -8 Z" fill={ST} stroke={INK} strokeWidth={3} /></g>}
+        outfit={<g>
+          {/* hoodie pocket + drawstrings */}
+          <path d="M108 292 h84 l-8 34 h-68 Z" fill="#DDA84E" stroke={INK} strokeWidth={3.5} strokeLinejoin="round" />
+          <path d="M136 222 v26 M164 222 v26" stroke={INK} strokeWidth={3} strokeLinecap="round" />
+        </g>} />
+      <g transform="translate(150 128) scale(1.2) translate(-150 -128)">
+      {/* ears + mane tuft */}
+      <ellipse cx={86} cy={44} rx={17} ry={33} transform="rotate(-26 86 44)" fill={W} stroke={INK} strokeWidth={SW} />
+      <ellipse cx={86} cy={46} rx={7} ry={18} transform="rotate(-26 86 46)" fill={ST} />
+      <ellipse cx={214} cy={44} rx={17} ry={33} transform="rotate(26 214 44)" fill={W} stroke={INK} strokeWidth={SW} />
+      <ellipse cx={214} cy={46} rx={7} ry={18} transform="rotate(26 214 46)" fill={ST} />
+      <path d="M118 44 q8 -26 18 -4 q8 -26 18 -4 q8 -26 18 -4 q8 -22 16 6 Z" fill={ST} stroke={INK} strokeWidth={3} strokeLinejoin="round" />
+      {/* face circle */}
+      <circle cx={150} cy={122} r={92} fill="url(#zf)" stroke={INK} strokeWidth={SW} />
+      <g stroke={ST} strokeWidth={9} fill="none" strokeLinecap="round">
+        <path d="M66 98 Q88 102 96 84" /><path d="M62 126 Q86 128 94 112" />
+        <path d="M234 98 Q212 102 204 84" /><path d="M238 126 Q214 128 206 112" />
+        <path d="M134 40 Q150 52 166 40" /><path d="M128 58 Q150 70 172 58" />
+      </g>
+      <LiamFace cx={150} cy={122} expr={expr} muzzle="#E2DCD1" nose="#3A3A3A" t={t} />
+      </g>
     </svg>
   );
 };
 
 export const Giraffe: React.FC<{ expr?: Expr; arms?: Arms; t?: number }> = ({ expr = "neutral", arms = "down", t = 0 }) => {
-  const [la, ra] = armAngles(arms);
-  const Y = "#F2C14E", P = "#B5651D", M = "#F8E1A4";
+  const Y = "#E5C27E", rim = "#CFA662", P = "#B98450";
+  const D = 72; // extra neck height (body sits D lower than Liam's)
   return (
-    <svg viewBox="0 0 300 560" width="100%" height="100%" style={{ overflow: "visible" }}>
-      <path d="M192 450 Q236 468 230 498" fill="none" stroke={INK} strokeWidth={SW} />
-      <path d="M222 492 l18 22 l-22 -2 Z" fill={P} stroke={INK} strokeWidth={3} />
-      <Limb x={128} y={460} len={92} w={32} angle={4} fill={Y} end={P} />
-      <Limb x={172} y={460} len={92} w={32} angle={-4} fill={Y} end={P} />
-      {/* neck */}
-      <rect x={124} y={150} width={52} height={230} rx={22} fill={Y} stroke={INK} strokeWidth={SW} />
-      {[[150, 210, 14], [138, 262, 11], [160, 318, 13]].map(([x, y, r], i) => <circle key={i} cx={x} cy={y} r={r} fill={P} />)}
-      {/* body */}
-      <rect x={94} y={350} width={112} height={130} rx={44} fill={Y} stroke={INK} strokeWidth={SW} />
-      {[[122, 388, 16], [176, 402, 14], [146, 444, 15]].map(([x, y, r], i) => <circle key={i} cx={x} cy={y} r={r} fill={P} />)}
-      <Limb x={104} y={370} len={88} w={28} angle={la} fill={Y} end={P} />
-      <Limb x={196} y={370} len={88} w={28} angle={ra} fill={Y} end={P} />
+    <svg viewBox="0 0 300 556" width="100%" height="100%" style={{ overflow: "visible" }}>
+      <defs><Shade id="gf" c={Y} rim={rim} /></defs>
+      <g transform={`translate(0 ${D})`}>
+        <Body id="gb" arms={arms} skin={Y} skinRim={rim} shirt="#A9C3EC"
+          tail={<g><path d="M206 330 Q248 342 248 372" fill="none" stroke={INK} strokeWidth={SW + 1} /><path d="M240 366 q10 8 16 22 q-14 2 -22 -8 Z" fill={P} stroke={INK} strokeWidth={3} /></g>}
+          outfit={<path d="M150 230 v108" stroke="#8FA9D6" strokeWidth={4} />} />
+      </g>
+      {/* turtleneck covering the long neck */}
+      <rect x={116} y={150} width={68} height={D + 92} rx={22} fill="#A9C3EC" stroke={INK} strokeWidth={SW} />
+      {[178, 198, 218, 238].map((y) => <line key={y} x1={120} x2={180} y1={y} y2={y} stroke="#8FA9D6" strokeWidth={3} />)}
+      <g transform="translate(150 118) scale(1.16) translate(-150 -118)">
       {/* ossicones + ears */}
       <g stroke={INK} strokeWidth={SW}>
-        <line x1={130} y1={52} x2={124} y2={18} /><line x1={170} y1={52} x2={176} y2={18} />
-        <circle cx={124} cy={16} r={11} fill={P} /><circle cx={176} cy={16} r={11} fill={P} />
+        <line x1={124} y1={38} x2={118} y2={6} /><line x1={176} y1={38} x2={182} y2={6} />
+        <circle cx={118} cy={5} r={10} fill={P} /><circle cx={182} cy={5} r={10} fill={P} />
       </g>
-      <ellipse cx={86} cy={84} rx={28} ry={13} transform="rotate(-20 86 84)" fill={Y} stroke={INK} strokeWidth={SW} />
-      <ellipse cx={214} cy={84} rx={28} ry={13} transform="rotate(20 214 84)" fill={Y} stroke={INK} strokeWidth={SW} />
-      {/* head */}
-      <ellipse cx={150} cy={100} rx={58} ry={62} fill={Y} stroke={INK} strokeWidth={SW} />
-      <circle cx={112} cy={70} r={9} fill={P} /><circle cx={190} cy={78} r={7} fill={P} />
-      <ellipse cx={150} cy={138} rx={40} ry={28} fill={M} stroke={INK} strokeWidth={SW} />
-      <ellipse cx={136} cy={132} rx={5} ry={6} fill={INK} /><ellipse cx={164} cy={132} rx={5} ry={6} fill={INK} />
-      <Face cx={150} cy={92} gap={27} expr={expr} mouthY={150} mouthW={18} />
-      <Steam x={150} y={20} on={expr === "angry"} t={t} />
+      <ellipse cx={58} cy={88} rx={30} ry={13} transform="rotate(-18 58 88)" fill={Y} stroke={INK} strokeWidth={SW} />
+      <ellipse cx={242} cy={88} rx={30} ry={13} transform="rotate(18 242 88)" fill={Y} stroke={INK} strokeWidth={SW} />
+      <circle cx={150} cy={112} r={88} fill="url(#gf)" stroke={INK} strokeWidth={SW} />
+      {[[96, 70, 13], [204, 78, 11], [86, 128, 9], [214, 130, 10], [150, 40, 9]].map(([x, y, r], i) => <circle key={i} cx={x} cy={y} r={r} fill={P} opacity={0.85} />)}
+      <LiamFace cx={150} cy={112} expr={expr} muzzle="#F1DDB0" nose="#5A3A22" t={t} />
+      </g>
     </svg>
   );
 };
 
 export const Hippo: React.FC<{ expr?: Expr; arms?: Arms; t?: number }> = ({ expr = "neutral", arms = "down", t = 0 }) => {
-  const [la, ra] = armAngles(arms);
-  const H = "#A9A0C8", B = "#C9C2E0", M = "#BDB3D8";
+  const H = "#B9AFCB", rim = "#9F94B5";
   return (
-    <svg viewBox="0 0 300 420" width="100%" height="100%" style={{ overflow: "visible" }}>
-      <Limb x={120} y={330} len={82} w={46} angle={3} fill={H} end={B} />
-      <Limb x={180} y={330} len={82} w={46} angle={-3} fill={H} end={B} />
-      <ellipse cx={150} cy={286} rx={92} ry={78} fill={H} stroke={INK} strokeWidth={SW} />
-      <ellipse cx={150} cy={300} rx={56} ry={50} fill={B} />
-      <Limb x={74} y={250} len={84} w={38} angle={la} fill={H} end={B} />
-      <Limb x={226} y={250} len={84} w={38} angle={ra} fill={H} end={B} />
-      {/* ears + eye bumps */}
-      <ellipse cx={92} cy={70} rx={16} ry={14} fill={H} stroke={INK} strokeWidth={SW} />
-      <ellipse cx={208} cy={70} rx={16} ry={14} fill={H} stroke={INK} strokeWidth={SW} />
-      <ellipse cx={150} cy={130} rx={84} ry={72} fill={H} stroke={INK} strokeWidth={SW} />
-      <ellipse cx={150} cy={170} rx={76} ry={44} fill={M} stroke={INK} strokeWidth={SW} />
-      <ellipse cx={124} cy={160} rx={8} ry={10} fill={INK} /><ellipse cx={176} cy={160} rx={8} ry={10} fill={INK} />
-      <Face cx={150} cy={104} gap={34} expr={expr} mouthY={190} mouthW={32} />
-      <Steam x={150} y={50} on={expr === "angry"} t={t} />
+    <svg viewBox="0 0 300 484" width="100%" height="100%" style={{ overflow: "visible" }}>
+      <defs><Shade id="hf" c={H} rim={rim} /></defs>
+      <Body id="hb" arms={arms} skin={H} skinRim={rim} shirt="#F1CBC5"
+        tail={<path d="M206 330 q26 6 30 24" fill="none" stroke={INK} strokeWidth={SW + 1} strokeLinecap="round" />}
+        outfit={<g>
+          {/* navy dungarees */}
+          <path d="M92 276 h116 l8 64 Q150 352 84 340 Z" fill="#3B4F72" stroke={INK} strokeWidth={SW} strokeLinejoin="round" />
+          <rect x={120} y={252} width={60} height={34} rx={6} fill="#3B4F72" stroke={INK} strokeWidth={3.5} />
+          <path d="M104 230 L122 256 M196 230 L178 256" stroke="#3B4F72" strokeWidth={9} strokeLinecap="round" />
+          <circle cx={124} cy={260} r={4} fill="#E8B75F" /><circle cx={176} cy={260} r={4} fill="#E8B75F" />
+        </g>} />
+      <g transform="translate(150 130) scale(1.2) translate(-150 -130)">
+      <ellipse cx={86} cy={44} rx={18} ry={15} fill={H} stroke={INK} strokeWidth={SW} />
+      <ellipse cx={214} cy={44} rx={18} ry={15} fill={H} stroke={INK} strokeWidth={SW} />
+      <circle cx={150} cy={124} r={94} fill="url(#hf)" stroke={INK} strokeWidth={SW} />
+      <LiamFace cx={150} cy={124} expr={expr} muzzle="#D6CCE2" muzzleRx={74} muzzleRy={48} nose="#5C4F72" t={t} />
+      <g fill="#5C4F72"><ellipse cx={128} cy={150} rx={6} ry={8} /><ellipse cx={172} cy={150} rx={6} ry={8} /></g>
+      </g>
     </svg>
   );
 };
 
-/** Mum: an original lioness (no mane), cardigan, clipboard reading "SEC", one eyebrow raised. */
+/** Mum: an original lioness drawn like Liam (same face colours and features, no mane), in a cardigan,
+ *  holding a clipboard reading "SEC". browUp 0..1 raises her right eyebrow. */
 export const Mum: React.FC<{ browUp?: number; t?: number }> = ({ browUp = 1 }) => {
-  const F = "#EDBE83", M = "#F9E3BF", D = "#D9A266";
+  const F = "#DCB883", rim = "#C79E66", M = "#EDD9AF";
   return (
-    <svg viewBox="0 0 320 460" width="100%" height="100%" style={{ overflow: "visible" }}>
-      <Limb x={136} y={360} len={92} w={36} angle={3} fill={F} end={F} />
-      <Limb x={184} y={360} len={92} w={36} angle={-3} fill={F} end={F} />
-      {/* cardigan body */}
-      <path d="M92 236 Q160 210 228 236 L238 372 Q160 392 82 372 Z" fill={C.blue} stroke={INK} strokeWidth={SW} strokeLinejoin="round" />
-      <path d="M160 226 L160 380" stroke={INK} strokeWidth={4} />
-      {/* arms holding the clipboard */}
-      <Limb x={98} y={250} len={92} w={32} angle={-24} fill={C.blue} end={F} />
-      <Limb x={222} y={250} len={92} w={32} angle={24} fill={C.blue} end={F} />
-      {/* clipboard */}
-      <g transform="translate(160 312) rotate(-4)">
-        <rect x={-78} y={-58} width={156} height={124} rx={10} fill={C.woodDark} stroke={INK} strokeWidth={SW} />
-        <rect x={-64} y={-40} width={128} height={96} rx={4} fill="#FFFFFF" stroke={INK} strokeWidth={3} />
-        <rect x={-26} y={-70} width={52} height={22} rx={6} fill={C.gold} stroke={INK} strokeWidth={4} />
-        <text x={0} y={18} textAnchor="middle" fontFamily="'Inter Black', Inter" fontWeight={900} fontSize={48} fill={C.navy}>SEC</text>
-        <line x1={-46} x2={46} y1={36} y2={36} stroke="#9AA" strokeWidth={4} />
+    <svg viewBox="0 0 300 484" width="100%" height="100%" style={{ overflow: "visible" }}>
+      <defs><Shade id="mf" c={F} rim={rim} /></defs>
+      <Body id="mb" arms="down" skin={F} skinRim={rim} shirt="#8FB0E8"
+        tail={<g><path d="M206 330 Q248 342 248 372" fill="none" stroke={INK} strokeWidth={SW + 1} /><path d="M240 366 q10 8 16 22 q-14 2 -22 -8 Z" fill="#C88A4E" stroke={INK} strokeWidth={3} /></g>}
+        outfit={<g><path d="M150 214 L150 344" stroke={INK} strokeWidth={3} /><circle cx={140} cy={262} r={4} fill={INK} /><circle cx={140} cy={292} r={4} fill={INK} /></g>} />
+      {/* clipboard held in front */}
+      <g transform="translate(150 300) rotate(-4)">
+        <rect x={-74} y={-56} width={148} height={118} rx={10} fill="#9C6535" stroke={INK} strokeWidth={SW} />
+        <rect x={-61} y={-40} width={122} height={92} rx={4} fill="#FFFFFF" stroke={INK} strokeWidth={2.5} />
+        <rect x={-24} y={-68} width={48} height={20} rx={6} fill="#F5A623" stroke={INK} strokeWidth={3.5} />
+        <text x={0} y={16} textAnchor="middle" fontFamily="'Inter Black', Inter" fontWeight={900} fontSize={46} fill="#13233A">SEC</text>
+        <line x1={-42} x2={42} y1={34} y2={34} stroke="#9AA" strokeWidth={4} />
       </g>
-      {/* paws over the clipboard edge */}
-      <ellipse cx={86} cy={334} rx={17} ry={15} fill={F} stroke={INK} strokeWidth={SW} />
-      <ellipse cx={234} cy={334} rx={17} ry={15} fill={F} stroke={INK} strokeWidth={SW} />
-      {/* ears */}
-      <circle cx={100} cy={70} r={26} fill={F} stroke={INK} strokeWidth={SW} /><circle cx={100} cy={70} r={12} fill={D} />
-      <circle cx={220} cy={70} r={26} fill={F} stroke={INK} strokeWidth={SW} /><circle cx={220} cy={70} r={12} fill={D} />
-      {/* head */}
-      <ellipse cx={160} cy={130} rx={78} ry={76} fill={F} stroke={INK} strokeWidth={SW} />
-      <ellipse cx={160} cy={168} rx={36} ry={26} fill={M} />
-      <path d="M150 152 Q160 147 170 152 Q166 162 160 163 Q154 162 150 152 Z" fill="#2B1D16" />
-      <g fill={INK}><circle cx={128} cy={124} r={7} /><circle cx={192} cy={124} r={7} /></g>
-      {/* brows: left flat, right raised */}
-      <g stroke={INK} strokeWidth={6} strokeLinecap="round" fill="none">
-        <line x1={114} y1={104} x2={140} y2={106} />
-        <path d={`M178 ${104 - 14 * browUp} Q192 ${92 - 22 * browUp} 208 ${102 - 12 * browUp}`} />
+      <circle cx={84} cy={300} r={17} fill={F} stroke={INK} strokeWidth={SW} />
+      <circle cx={216} cy={300} r={17} fill={F} stroke={INK} strokeWidth={SW} />
+      <g transform="translate(150 128) scale(1.2) translate(-150 -128)">
+      {/* round lioness ears */}
+      <circle cx={84} cy={50} r={24} fill={F} stroke={INK} strokeWidth={SW} /><circle cx={84} cy={50} r={11} fill="#C79E66" />
+      <circle cx={216} cy={50} r={24} fill={F} stroke={INK} strokeWidth={SW} /><circle cx={216} cy={50} r={11} fill="#C79E66" />
+      <circle cx={150} cy={122} r={92} fill="url(#mf)" stroke={INK} strokeWidth={SW} />
+      <ellipse cx={150} cy={162} rx={62} ry={44} fill={M} />
+      <g fill={INK}><circle cx={116} cy={114} r={6.2} /><circle cx={184} cy={114} r={6.2} /></g>
+      <g stroke={INK} strokeWidth={4.6} strokeLinecap="round" fill="none">
+        <line x1={102} y1={96} x2={128} y2={98} />
+        <path d={`M170 ${96 - 12 * browUp} Q184 ${84 - 20 * browUp} 200 ${94 - 10 * browUp}`} />
       </g>
-      {/* unimpressed mouth */}
-      <path d="M146 182 Q160 178 176 184" fill="none" stroke={INK} strokeWidth={5} strokeLinecap="round" />
+      <path d="M140 146 Q150 141 160 146 Q156 155 150 156 Q144 155 140 146 Z" fill="#2A1E18" />
+      {/* unimpressed flat mouth */}
+      <path d="M134 172 Q150 168 168 174" fill="none" stroke={INK} strokeWidth={4} strokeLinecap="round" />
+      </g>
     </svg>
   );
 };
