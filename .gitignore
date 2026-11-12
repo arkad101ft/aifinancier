@@ -128,3 +128,7 @@ gfpgan/
 
 # Studio deliverables (rendered media, never commit)
 studio/output/
+
+# Liam Tries It Ep. 1: its small assets (Liam cutout, synthesised sfx, fonts) are part of the source
+!projects/liam-tries-it-ep1/public/
+!projects/liam-tries-it-ep1/public/sfx/*.wav

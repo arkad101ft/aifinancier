@@ -1,0 +1,45 @@
+{
+  "title": "Liam Tries It · Ep. 1 · The Lemonade Fund",
+  "fps": 30,
+  "duration": 40,
+  "scenes": [
+    {"id": "s1_title",  "name": "Title card", "start": 0,  "end": 4},
+    {"id": "s2_pitch",  "name": "The pitch",  "start": 4,  "end": 10},
+    {"id": "s3_profit", "name": "The 'profit'", "start": 10, "end": 17},
+    {"id": "s4_grows",  "name": "It grows",   "start": 17, "end": 26},
+    {"id": "s5_friday", "name": "Friday",     "start": 26, "end": 34},
+    {"id": "s6_caught", "name": "Caught",     "start": 34, "end": 40}
+  ],
+  "lines": [
+    {"n": 1, "scene": "s2_pitch",  "start": 4.80,  "end": 9.40,  "direction": "Big, confident sales pitch",
+     "text": "Invest in the Lemonade Fund! Twenty percent returns. Every week. Guaranteed."},
+    {"n": 2, "scene": "s3_profit", "start": 14.00, "end": 15.80, "direction": "Winking at camera, smug",
+     "text": "See? Profitable."},
+    {"n": 3, "scene": "s4_grows",  "start": 22.60, "end": 25.40, "direction": "Nervous laugh first, then forced calm",
+     "text": "It's fine. It's totally fine."},
+    {"n": 4, "scene": "s5_friday", "start": 29.60, "end": 33.20, "direction": "Panicked, voice cracking on 'harder'",
+     "text": "Has anyone… tried just believing harder?"},
+    {"n": 5, "scene": "s6_caught", "start": 35.80, "end": 36.90, "direction": "Tiny, frozen voice",
+     "text": "…Mum?"}
+  ],
+  "sfx": [
+    {"at": 0.30,  "file": "pop",    "vol": 0.6},
+    {"at": 1.80,  "file": "thud",   "vol": 0.7},
+    {"at": 3.85,  "file": "whoosh", "vol": 0.6},
+    {"at": 9.25,  "file": "ding",   "vol": 0.55},
+    {"at": 9.85,  "file": "whoosh", "vol": 0.5},
+    {"at": 12.05, "file": "ding",   "vol": 0.55},
+    {"at": 13.35, "file": "tink",   "vol": 0.6},
+    {"at": 16.85, "file": "whoosh", "vol": 0.5},
+    {"at": 18.00, "file": "pop",    "vol": 0.5},
+    {"at": 20.00, "file": "pop",    "vol": 0.5},
+    {"at": 22.00, "file": "pop",    "vol": 0.5},
+    {"at": 24.00, "file": "pop",    "vol": 0.6},
+    {"at": 25.85, "file": "whoosh", "vol": 0.5},
+    {"at": 26.00, "file": "thud",   "vol": 0.8},
+    {"at": 28.85, "file": "tink",   "vol": 0.7},
+    {"at": 29.00, "file": "roll",   "vol": 0.6},
+    {"at": 34.00, "file": "creak",  "vol": 0.8},
+    {"at": 37.00, "file": "thud",   "vol": 0.6}
+  ]
+}
